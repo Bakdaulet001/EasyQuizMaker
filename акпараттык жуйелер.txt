@@ -1,0 +1,71 @@
+<question>Қайсыбір әрекетке объектінің жауап ретінде өзгеру күйі–
+<variant>құбылыс
+<variant>Класс
+<variant>объект күйі
+<variant>әдіс
+<variant>қасиет
+<question>Обьект орындай алатын сипаттамасы – бұл …сипаттамасы – бұл …
+<question>Обьект орындай алатын әрекет - бұл…
+<variant>әдіс
+<variant>Класс
+<variant>Объект
+<variant>оқиға
+<variant>қасиет
+<question>Обьект сипаттамасы – бұл …
+<variant>қасиет
+<variant>Класс
+<variant>Объект
+<variant>оқиға
+<variant>әдіс
+<question>Қасиеттер мен әдістердің жиынтығы – бұл …
+<variant>Объект
+<variant>Класс
+<variant>оқиға
+<variant>әдіс
+<variant>қасиет
+<question2>Программалауқұралдарыныңмысалдары:
+<variantright>Visual Studio
+<variantright>PyCharm
+<variant>Excel
+<variant>Paint
+<variant>Word
+<variant>Notepad
+<question2>Kanban қағидалары:
+<variantright>Жұмысағынынвизуализациялау
+<variantright>Процестіүздіксізжетілдіру
+<variant>Құжатсызбасқару
+<variant>Баяужоспар
+<variant>Тексерусізбақылау
+<variant>Қатеесептеу
+<question2>Жүйелікжобалаудыңмақсаттары:
+<variantright>Жүйеқұрылымыннақтылау
+<variantright>Функционалдықталаптардыіскеасыру
+<variant>Тексынау
+<variant>Кездейсоқжоспар
+<variant>Файлатауынөзгерту
+<variant>Құжатсызпроцесс
+<question2>Модельдеудіңәдістері:
+<variantright>DFD (Data Flow Diagram)
+<variantright>ER (Entity-Relationship)
+<variant>PDF диаграмма
+<variant>DOC схема
+<variant>TXT модель
+<variant>XML ағаш
+<question3>ISO/IEC 25010 стандарты сипаттайтын негізгі аспектілер?
+<variantright>Бағдарламалық өнім сапасы
+<variantright>Функционалдық жарамдылық
+<variantright>Сенімділік
+<variant>Қолданушылардың қанағаттануы
+<variant>Жүйе архитектурасы
+<variant>Тек интернет хаттамалары
+<variant>Тек деректерді сақтау
+<variant>Тек құжаттама
+<question3>Жүйелік жобалау кезеңдері:
+<variantright>Архитектураны таңдау
+<variantright>Компоненттерді бөлу
+<variantright>Интерфейстерді анықтау
+<variant>Бағандар құру
+<variant>Файл пішімі
+<variant>Құжат атауы
+<variant>Кестежазу
+<variant>Қатеенгізу
