@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyQuizMaker - Тест сіздің білімін тексеру үшін</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f1419 0%, #1a202c 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* ===== INPUT SCREEN ===== */
+        .input-screen {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .input-screen.hidden {
+            display: none;
+        }
+
+        .input-container {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 30px 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .input-container h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .input-container p {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 25px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 250px;
+            padding: 15px;
+            background: rgba(30, 41, 59, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: #ffffff;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            resize: vertical;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            flex: 1;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: #10b981;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-next {
+            background: #fbbf24;
+            color: #0f1419;
+        }
+
+        .btn-next:hover {
+            background: #f59e0b;
+            transform: translateY(-2px);
+        }
+
+        /* ===== QUIZ SCREEN ===== */
+        .quiz-screen {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 15px 0;
+        }
+
+        .quiz-screen.hidden {
+            display: none;
+        }
+
+        .quiz-header {
+            background: rgba(15, 23, 42, 0.8);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .quiz-progress {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .quiz-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stat-correct {
+            color: #10b981;
+            font-weight: 600;
+        }
+
+        .stat-incorrect {
+            color: #ef4444;
+            font-weight: 600;
+        }
+
+        .quiz-content {
+            flex: 1;
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .question-container {
+            margin-bottom: 30px;
+        }
+
+        .question-type-label {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            font-weight: 600;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .question-text {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            line-height: 1.5;
+            color: #ffffff;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option {
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #ffffff;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            user-select: none;
+        }
+
+        .option:hover:not(.disabled) {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .option input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: #10b981;
+        }
+
+        .option.selected {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .option.correct {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: #10b981;
+            color: #10b981;
+        }
+
+        .option.incorrect {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: #ef4444;
+            color: #ef4444;
+        }
+
+        .option.disabled {
+            cursor: not-allowed;
+            opacity: 0.8;
+        }
+
+        .feedback-message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            display: none;
+        }
+
+        .feedback-message.show {
+            display: block;
+        }
+
+        .feedback-correct {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            border: 2px solid #10b981;
+        }
+
+        .feedback-incorrect {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+            border: 2px solid #ef4444;
+        }
+
+        .quiz-footer {
+            padding: 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .quiz-footer button {
+            flex: 1;
+        }
+
+        /* ===== RESULTS SCREEN ===== */
+        .results-screen {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 20px 15px;
+        }
+
+        .results-screen.hidden {
+            display: none;
+        }
+
+        .results-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .results-header h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .results-score {
+            font-size: 48px;
+            font-weight: bold;
+            color: #10b981;
+            margin-bottom: 10px;
+        }
+
+        .results-subtitle {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 16px;
+        }
+
+        .results-list {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+
+        .result-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .result-item.correct {
+            border-left-color: #10b981;
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .result-item.incorrect {
+            border-left-color: #ef4444;
+            background: rgba(239, 68, 68, 0.1);
+        }
+
+        .result-number {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .result-question {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .result-answer {
+            margin-bottom: 8px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .result-user-answer {
+            color: #fbbf24;
+        }
+
+        .result-correct-answer {
+            color: #10b981;
+        }
+
+        .result-unselected-answer {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .result-icon {
+            display: inline-block;
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        .results-footer {
+            padding: 15px 0;
+        }
+
+        .results-footer button {
+            width: 100%;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 600px) {
+            body {
+                padding: 8px;
+            }
+
+            .input-container {
+                padding: 20px 15px;
+            }
+
+            .input-container h1 {
+                font-size: 24px;
+            }
+
+            .question-text {
+                font-size: 16px;
+            }
+
+            .quiz-header {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+
+            .quiz-stats {
+                width: 100%;
+                justify-content: space-around;
+            }
+
+            .results-score {
+                font-size: 36px;
+            }
+
+            .option {
+                font-size: 14px;
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .input-container h1 {
+                font-size: 20px;
+            }
+
+            textarea {
+                font-size: 13px;
+                min-height: 200px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 12px 15px;
+            }
+
+            .quiz-content {
+                padding: 15px 10px;
+            }
+
+            .question-text {
+                font-size: 15px;
+            }
+        }
+
+        /* ===== SCROLLBAR STYLING ===== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- INPUT SCREEN -->
+    <div class="input-screen" id="inputScreen">
+        <div class="input-container">
+            <h1>📚 EasyQuizMaker — Автозагрузка из .txt</h1>
+            <p id="siteSubtitle">Автоматическое создание теста из `акпараттык жуйелер.txt`</p>
+            <div id="autoLoadStatus" style="margin-bottom:8px; color:rgba(255,255,255,0.9); font-size:14px;">Попытка автоматически загрузить файл теста из `акпараттык жуйелер.txt`...</div>
+
+            <div style="display:flex; gap:12px; align-items:center; margin:12px 0;">
+                <div style="font-size:13px; color:rgba(255,255,255,0.8);">Общее количество вопросов:</div>
+                <div id="detectedTotal" style="font-weight:700; font-size:18px; color:#fbbf24;">0</div>
+            </div>
+
+            <div class="button-group">
+                <button id="startButton" class="btn-primary" onclick="startQuiz()" disabled>Старт теста</button>
+                <button id="retryBtn" class="btn-secondary" style="display:none;">Повторить загрузку</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUIZ SCREEN -->
+    <div class="quiz-screen hidden" id="quizScreen">
+        <div class="quiz-header">
+            <div class="quiz-progress">
+                <span id="questionNumber">1</span> / <span id="totalQuestions">10</span>
+            </div>
+            <div class="quiz-stats">
+                <div class="stat-item">
+                    <span>✓</span>
+                    <span class="stat-correct" id="correctCount">0</span>
+                </div>
+                <div class="stat-item">
+                    <span>✗</span>
+                    <span class="stat-incorrect" id="incorrectCount">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="quiz-content">
+            <div class="question-container">
+                <div class="question-text" id="questionText"></div>
+                <div class="options" id="optionsContainer"></div>
+                <div class="feedback-message" id="feedbackMessage"></div>
+            </div>
+
+            <div class="quiz-footer">
+                <button class="btn-secondary" onclick="goBack()">Артқа</button>
+                <button class="btn-secondary" id="skipBtn" style="display:none;" onclick="skipQuestion()">Пропустить</button>
+                <button class="btn-next" id="nextBtn" onclick="nextQuestion()">Келесі сұрақ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- RESULTS SCREEN -->
+    <div class="results-screen hidden" id="resultsScreen">
+        <div class="results-header">
+            <h1>🎉 Тест аяқталды!</h1>
+            <div class="results-score" id="finalScore">0/10</div>
+            <div class="results-subtitle" id="resultMessage">Сізің нәтижеңіз: 0%</div>
+            <div id="resultsCounts" style="margin-top:8px; font-size:14px; color:rgba(255,255,255,0.8);">Правильных: 0 • Неправильных: 0</div>
+        </div>
+
+        <div class="results-list" id="resultsList"></div>
+
+        <div class="results-footer">
+            <button class="btn-primary" onclick="restartQuiz()">Қайта бастау</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // STATE MANAGEMENT
+    let questions = [];
+    let currentQuestionIndex = 0;
+    let userAnswers = [];
+    let answeredQuestions = 0;
+    let questionAnswerStates = []; // Track whether answer was submitted
+
+    // PARSE XML FORMAT QUESTIONS
+    function parseQuestions(text) {
+        const questions = [];
+
+        // Split by question tags (question, question2, question3)
+        const lines = text.split('\n').map(l => l.trim()).filter(l => l);
+
+        let currentQuestion = null;
+        let currentType = null;
+
+        function pushCurrentQuestion() {
+            if (!currentQuestion) return;
+            // For <question> type: if no variant was explicitly marked as correct (<variantright>),
+            // default the first variant to correct. Do NOT blindly override existing isCorrect flags.
+            if (currentQuestion.type === 'question') {
+                const hasExplicit = currentQuestion.variants.some(v => v.isCorrect);
+                if (!hasExplicit && currentQuestion.variants.length > 0) {
+                    currentQuestion.variants[0].isCorrect = true;
+                }
+                currentQuestion.correctCount = currentQuestion.variants.filter(v => v.isCorrect).length;
+            } else {
+                currentQuestion.correctCount = currentQuestion.variants.filter(v => v.isCorrect).length;
+            }
+            questions.push(currentQuestion);
+        }
+
+        for (let line of lines) {
+            // Check for question type markers
+            if (line.startsWith('<question3>')) {
+                if (currentQuestion) {
+                    pushCurrentQuestion();
+                }
+                currentType = 'question3';
+                currentQuestion = {
+                    question: line.replace('<question3>', '').trim(),
+                    variants: [],
+                    type: 'question3',
+                    correctCount: 0
+                };
+            } else if (line.startsWith('<question2>')) {
+                if (currentQuestion) {
+                    pushCurrentQuestion();
+                }
+                currentType = 'question2';
+                currentQuestion = {
+                    question: line.replace('<question2>', '').trim(),
+                    variants: [],
+                    type: 'question2',
+                    correctCount: 0
+                };
+            } else if (line.startsWith('<question>')) {
+                if (currentQuestion) {
+                    pushCurrentQuestion();
+                }
+                currentType = 'question';
+                    currentQuestion = {
+                        question: line.replace('<question>', '').trim(),
+                        variants: [],
+                        type: 'question',
+                        correctCount: 0
+                    };
+            } else if (line.startsWith('<variantright>')) {
+                // Correct variant
+                const variantText = line.replace('<variantright>', '').trim();
+                if (currentQuestion && variantText) {
+                    currentQuestion.variants.push({
+                        text: variantText,
+                        isCorrect: true
+                    });
+                    currentQuestion.correctCount++;
+                }
+            } else if (line.startsWith('<variant>')) {
+                // Incorrect variant
+                const variantText = line.replace('<variant>', '').trim();
+                if (currentQuestion && variantText) {
+                    currentQuestion.variants.push({
+                        text: variantText,
+                        isCorrect: false
+                    });
+                }
+            }
+        }
+
+        // Finalize and add the last question if present
+        if (currentQuestion) {
+            pushCurrentQuestion();
+        }
+
+        return questions;
+    }
+
+    // TRY AUTO-LOAD TXT FILE FROM SAME DIRECTORY — fetch-only automatic mode
+    let loadedText = '';
+    let loadedQuestions = null;
+
+    function attemptAutoLoadFile() {
+        const status = document.getElementById('autoLoadStatus');
+        const detected = document.getElementById('detectedTotal');
+        const startBtn = document.getElementById('startButton');
+        const retryBtn = document.getElementById('retryBtn');
+
+        status.textContent = 'Попытка автоматически загрузить `акпараттык жуйелер.txt`...';
+        startBtn.disabled = true;
+
+        fetch('акпараттык жуйелер.txt')
+            .then(response => {
+                if (!response.ok) throw new Error('not found');
+                return response.text();
+            })
+            .then(text => {
+                loadedText = text;
+                loadedQuestions = parseQuestions(text);
+                detected.textContent = loadedQuestions.length;
+                status.textContent = 'Файл успешно загружен автоматически.';
+                startBtn.disabled = loadedQuestions.length === 0;
+                // show retry hidden
+                retryBtn.style.display = 'none';
+            })
+            .catch(err => {
+                loadedText = '';
+                loadedQuestions = null;
+                detected.textContent = '0';
+                status.textContent = 'Автозагрузка не удалась — чтобы работало автоматически, запустите локальный HTTP-сервер или разместите файл на сервере.';
+                // show retry button so user can try again after fixing server
+                retryBtn.style.display = 'inline-block';
+                startBtn.disabled = true;
+            });
+
+        // Retry button handler
+        const retryBtnEl = document.getElementById('retryBtn');
+        if (retryBtnEl) {
+            retryBtnEl.addEventListener('click', () => {
+                attemptAutoLoadFile();
+            });
+        }
+    }
+
+    // SHUFFLE FUNCTION
+    function shuffle(array) {
+        const arr = [...array];
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+    }
+
+    // START QUIZ
+    function startQuiz() {
+        // Use previously loaded parsed questions (no manual insertion)
+        if (!loadedQuestions || loadedQuestions.length === 0) {
+            alert('Сұрақтар не загружены. Запустите локальный HTTP-сервер и убедитесь, что `акпараттык жуйелер.txt` доступен.');
+            return;
+        }
+
+        // clone loaded questions so we don't modify the original parsed array
+        questions = JSON.parse(JSON.stringify(loadedQuestions));
+
+        if (questions.length === 0) {
+            alert('Сұрақтарды табу мүмкін болмады. XML форматын тексеріңіз!');
+            return;
+        }
+
+        // Shuffle questions
+        questions = shuffle(questions);
+
+        // Shuffle variants within each question
+        questions.forEach(q => {
+            q.variants = shuffle(q.variants);
+        });
+
+        // Reset state
+        currentQuestionIndex = 0;
+        userAnswers = new Array(questions.length).fill(null);
+        questionAnswerStates = new Array(questions.length).fill(false);
+        answeredQuestions = 0;
+
+        // Show quiz screen
+        document.getElementById('inputScreen').classList.add('hidden');
+        document.getElementById('quizScreen').classList.remove('hidden');
+
+        document.getElementById('totalQuestions').textContent = questions.length;
+        displayQuestion();
+    }
+
+    // Attempt auto-load when page is ready
+    window.addEventListener('DOMContentLoaded', () => {
+        attemptAutoLoadFile();
+    });
+
+    // DISPLAY CURRENT QUESTION
+    function displayQuestion() {
+        const q = questions[currentQuestionIndex];
+
+        document.getElementById('questionNumber').textContent = currentQuestionIndex + 1;
+        
+        // Build question text with type indicator
+        let questionTypeLabel = '';
+        if (q.type === 'question') {
+            questionTypeLabel = '(Вопрос с 1 верным ответом)';
+        } else if (q.type === 'question2') {
+            const correctCount = q.variants.filter(v => v.isCorrect).length;
+            questionTypeLabel = `(Вопрос с ${correctCount} верными ответами)`;
+        } else if (q.type === 'question3') {
+            const correctCount = q.variants.filter(v => v.isCorrect).length;
+            questionTypeLabel = `(Вопрос с ${correctCount} верными ответами)`;
+        }
+        
+        document.getElementById('questionText').textContent = q.question;
+        
+        // Add type indicator
+        const questionContainer = document.querySelector('.question-container');
+        let typeIndicator = questionContainer.querySelector('.question-type-label');
+        
+        if (!typeIndicator) {
+            typeIndicator = document.createElement('div');
+            typeIndicator.className = 'question-type-label';
+            questionContainer.insertBefore(typeIndicator, document.getElementById('optionsContainer'));
+        }
+        typeIndicator.textContent = questionTypeLabel;
+
+        const optionsContainer = document.getElementById('optionsContainer');
+        optionsContainer.innerHTML = '';
+
+        const feedback = document.getElementById('feedbackMessage');
+        feedback.classList.remove('show', 'feedback-correct', 'feedback-incorrect');
+
+        const skipBtn = document.getElementById('skipBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        if (skipBtn) skipBtn.style.display = 'none';
+        if (nextBtn) nextBtn.disabled = false;
+
+        // Determine input type based on question type
+        const isMultipleChoice = q.type !== 'question';
+
+        // If question has no variants, show notice and let user skip manually
+        if (!q.variants || q.variants.length === 0) {
+            const notice = document.createElement('div');
+            notice.className = 'option disabled';
+            notice.style.border = '2px dashed rgba(255,255,255,0.1)';
+            notice.style.background = 'rgba(255,255,255,0.02)';
+            notice.style.color = 'rgba(255,255,255,0.8)';
+            notice.style.fontStyle = 'italic';
+            notice.textContent = 'Бұл сұрақта жауап варианттары жоқ — сұрақты пропустите, чтобы продолжить.';
+            optionsContainer.appendChild(notice);
+
+            // Show neutral feedback and enable skip button
+            feedback.classList.add('show');
+            feedback.classList.remove('feedback-correct', 'feedback-incorrect');
+            feedback.textContent = 'У этого вопроса нет вариантов — нажмите «Пропустить», чтобы перейти дальше.';
+
+            if (skipBtn) skipBtn.style.display = 'inline-block';
+            if (nextBtn) nextBtn.disabled = true;
+
+            return;
+        }
+
+        q.variants.forEach((variant, idx) => {
+            const label = document.createElement('label');
+            label.className = 'option';
+
+            const input = document.createElement('input');
+            input.type = isMultipleChoice ? 'checkbox' : 'radio';
+            input.name = isMultipleChoice ? `answer-${currentQuestionIndex}` : `answer-${currentQuestionIndex}`;
+            input.value = idx;
+            input.id = `opt-${currentQuestionIndex}-${idx}`;
+
+            // Initialize userAnswers structure if needed
+            if (isMultipleChoice) {
+                if (!Array.isArray(userAnswers[currentQuestionIndex])) {
+                    userAnswers[currentQuestionIndex] = [];
+                }
+                if (userAnswers[currentQuestionIndex].includes(idx)) {
+                    input.checked = true;
+                    label.classList.add('selected');
+                }
+            } else {
+                if (userAnswers[currentQuestionIndex] === idx) {
+                    input.checked = true;
+                    label.classList.add('selected');
+                }
+            }
+
+            const text = document.createElement('span');
+            text.textContent = variant.text;
+
+            label.appendChild(input);
+            label.appendChild(text);
+
+            // Use input change event to keep DOM state and internal state in sync
+            input.addEventListener('change', (e) => {
+                if (label.classList.contains('disabled')) {
+                    // prevent changes if disabled (after checking)
+                    e.preventDefault();
+                    // restore checked state to reflect current userAnswers
+                    if (isMultipleChoice) {
+                        input.checked = userAnswers[currentQuestionIndex] && userAnswers[currentQuestionIndex].includes(idx);
+                    } else {
+                        input.checked = userAnswers[currentQuestionIndex] === idx;
+                    }
+                    return;
+                }
+
+                if (isMultipleChoice) {
+                    selectAnswer(idx, input.checked);
+                } else {
+                    selectAnswer(idx, true);
+                }
+            });
+
+            optionsContainer.appendChild(label);
+        });
+
+        // If this question was already answered earlier, reveal the answer state
+        if (questionAnswerStates[currentQuestionIndex]) {
+            revealAnswerForQuestion(currentQuestionIndex);
+        }
+
+        // Update button text
+        document.getElementById('nextBtn').textContent = currentQuestionIndex === questions.length - 1 
+            ? 'Аяқтау' 
+            : 'Келесі сұрақ';
+    }
+
+    // SELECT ANSWER
+    function selectAnswer(variantIndex) {
+        const q = questions[currentQuestionIndex];
+
+        // Support being called with (variantIndex, checked)
+        let checked = null;
+        if (arguments.length > 1) checked = arguments[1];
+
+        // For single-choice questions (question type)
+        if (q.type === 'question') {
+            userAnswers[currentQuestionIndex] = variantIndex;
+
+            const optionsContainer = document.getElementById('optionsContainer');
+            const optionLabels = optionsContainer.querySelectorAll('label');
+
+            optionLabels.forEach((label, idx) => {
+                const input = label.querySelector('input');
+                if (idx === variantIndex) {
+                    label.classList.add('selected');
+                    if (input) input.checked = true;
+                } else {
+                    label.classList.remove('selected');
+                    if (input) input.checked = false;
+                }
+            });
+        } else {
+            // Multiple choice
+            if (!Array.isArray(userAnswers[currentQuestionIndex])) {
+                userAnswers[currentQuestionIndex] = [];
+            }
+
+            const selected = userAnswers[currentQuestionIndex];
+
+            if (checked === null) {
+                // toggle if checked not provided
+                const pos = selected.indexOf(variantIndex);
+                if (pos > -1) {
+                    selected.splice(pos, 1);
+                } else {
+                    selected.push(variantIndex);
+                }
+            } else {
+                const pos = selected.indexOf(variantIndex);
+                if (checked && pos === -1) {
+                    selected.push(variantIndex);
+                } else if (!checked && pos > -1) {
+                    selected.splice(pos, 1);
+                }
+            }
+
+            // Update UI
+            const optionsContainer = document.getElementById('optionsContainer');
+            const optionLabels = optionsContainer.querySelectorAll('label');
+
+            optionLabels.forEach((label, idx) => {
+                const input = label.querySelector('input');
+                if (selected.includes(idx)) {
+                    label.classList.add('selected');
+                    if (input) input.checked = true;
+                } else {
+                    label.classList.remove('selected');
+                    if (input) input.checked = false;
+                }
+            });
+        }
+    }
+
+    // Reveal answer for a question without alerting (used when going back or showing history)
+    function revealAnswerForQuestion(index) {
+        const q = questions[index];
+        const optionsContainer = document.getElementById('optionsContainer');
+        const optionLabels = optionsContainer.querySelectorAll('label');
+        const feedback = document.getElementById('feedbackMessage');
+
+        let isCorrect = false;
+
+        if (q.type === 'question') {
+            const selectedIdx = userAnswers[index];
+            isCorrect = selectedIdx !== null && selectedIdx !== undefined && q.variants[selectedIdx] && q.variants[selectedIdx].isCorrect;
+        } else {
+            const selectedIndices = userAnswers[index] || [];
+            const correctIndices = q.variants.map((v, i) => v.isCorrect ? i : -1).filter(i => i !== -1);
+            isCorrect = selectedIndices.length === correctIndices.length && selectedIndices.every(i => q.variants[i].isCorrect);
+        }
+
+        // Show feedback
+        feedback.classList.add('show');
+        feedback.classList.remove('feedback-correct', 'feedback-incorrect');
+        feedback.classList.add(isCorrect ? 'feedback-correct' : 'feedback-incorrect');
+        feedback.textContent = isCorrect ? '✓ Дұрыс жауап!' : '✗ Қате жауап!';
+
+        // Style options
+        optionLabels.forEach((label, idx) => {
+            label.classList.add('disabled');
+            if (q.variants[idx].isCorrect) {
+                label.classList.add('correct');
+            } else if (Array.isArray(userAnswers[index]) ? userAnswers[index].includes(idx) : userAnswers[index] === idx) {
+                label.classList.add('incorrect');
+            }
+        });
+    }
+
+    // SHOW FEEDBACK
+    function showFeedback(isCorrect) {
+        const feedback = document.getElementById('feedbackMessage');
+        feedback.classList.add('show');
+        feedback.classList.add(isCorrect ? 'feedback-correct' : 'feedback-incorrect');
+        feedback.textContent = isCorrect ? '✓ Дұрыс жауап!' : '✗ Қате жауап!';
+    }
+
+    // CHECK ANSWER AND SHOW FEEDBACK
+    function checkCurrentAnswer() {
+        const q = questions[currentQuestionIndex];
+        const feedback = document.getElementById('feedbackMessage');
+        
+        if (q.type === 'question') {
+            // Single choice
+            if (userAnswers[currentQuestionIndex] === null || userAnswers[currentQuestionIndex] === undefined) {
+                alert('Жауап таңдаңыз!');
+                return false;
+            }
+
+            const selectedIdx = userAnswers[currentQuestionIndex];
+            let isCorrect = false;
+            if (selectedIdx !== null && selectedIdx !== undefined && q.variants[selectedIdx]) {
+                isCorrect = !!q.variants[selectedIdx].isCorrect;
+            }
+
+            // Show feedback
+            feedback.classList.add('show');
+            feedback.classList.remove('feedback-correct', 'feedback-incorrect');
+            feedback.classList.add(isCorrect ? 'feedback-correct' : 'feedback-incorrect');
+            feedback.textContent = isCorrect ? '✓ Дұрыс жауап!' : '✗ Қате жауап!';
+
+            // Style options
+            const optionsContainer = document.getElementById('optionsContainer');
+            const optionLabels = optionsContainer.querySelectorAll('label');
+
+            optionLabels.forEach((label, idx) => {
+                label.classList.add('disabled');
+                if (idx === selectedIdx) {
+                    label.classList.add(isCorrect ? 'correct' : 'incorrect');
+                } else if (q.variants[idx].isCorrect) {
+                    label.classList.add('correct');
+                } else {
+                    label.classList.remove('correct', 'incorrect');
+                }
+            });
+
+            // Mark question as answered
+            if (!questionAnswerStates[currentQuestionIndex]) {
+                questionAnswerStates[currentQuestionIndex] = true;
+                answeredQuestions++;
+            }
+
+            return true;
+        } else {
+            // Multiple choice
+            const selectedIndices = userAnswers[currentQuestionIndex];
+            
+            if (!selectedIndices || !Array.isArray(selectedIndices) || selectedIndices.length === 0) {
+                alert('Жауап таңдаңыз!');
+                return false;
+            }
+
+            const correctIndices = q.variants
+                .map((v, idx) => v.isCorrect ? idx : -1)
+                .filter(idx => idx !== -1);
+
+            // Check if all correct answers are selected and no wrong answers are selected
+            const isCorrect = selectedIndices.length === correctIndices.length &&
+                selectedIndices.every(idx => q.variants[idx].isCorrect);
+
+            // Show feedback
+            feedback.classList.add('show');
+            feedback.classList.add(isCorrect ? 'feedback-correct' : 'feedback-incorrect');
+            feedback.textContent = isCorrect ? '✓ Дұрыс жауап!' : '✗ Қате жауап!';
+
+            // Style options
+            const optionsContainer = document.getElementById('optionsContainer');
+            const optionLabels = optionsContainer.querySelectorAll('label');
+
+            optionLabels.forEach((label, idx) => {
+                label.classList.add('disabled');
+                if (q.variants[idx].isCorrect) {
+                    label.classList.add('correct');
+                } else if (selectedIndices.includes(idx)) {
+                    label.classList.add('incorrect');
+                }
+            });
+
+            // Mark question as answered
+            if (!questionAnswerStates[currentQuestionIndex]) {
+                questionAnswerStates[currentQuestionIndex] = true;
+                answeredQuestions++;
+            }
+
+            return true;
+        }
+    }
+
+    // UPDATE STATS
+    function updateStats() {
+        let correctCount = 0;
+        let answeredCount = 0;
+
+        questions.forEach((q, idx) => {
+            if (userAnswers[idx] === null || userAnswers[idx] === undefined || 
+                (Array.isArray(userAnswers[idx]) && userAnswers[idx].length === 0)) {
+                return;
+            }
+
+            answeredCount++;
+
+            if (q.type === 'question') {
+                // Single choice
+                const sel = userAnswers[idx];
+                if (sel !== null && sel !== undefined && q.variants[sel] && q.variants[sel].isCorrect) {
+                    correctCount++;
+                }
+            } else {
+                // Multiple choice
+                const selectedIndices = userAnswers[idx];
+                const correctIndices = q.variants
+                    .map((v, i) => v.isCorrect ? i : -1)
+                    .filter(i => i !== -1);
+
+                if (selectedIndices.length === correctIndices.length &&
+                    selectedIndices.every(i => q.variants[i].isCorrect)) {
+                    correctCount++;
+                }
+            }
+        });
+
+        document.getElementById('correctCount').textContent = correctCount;
+        document.getElementById('incorrectCount').textContent = answeredCount - correctCount;
+    }
+
+    // CALCULATE SCORE
+    function calculateScore() {
+        let totalScore = 0;
+
+        questions.forEach((q, idx) => {
+            if (userAnswers[idx] === null || userAnswers[idx] === undefined || 
+                (Array.isArray(userAnswers[idx]) && userAnswers[idx].length === 0)) {
+                return;
+            }
+
+            let isCorrect = false;
+
+            if (q.type === 'question') {
+                const sel = userAnswers[idx];
+                if (sel !== null && sel !== undefined && q.variants[sel] && q.variants[sel].isCorrect) {
+                    isCorrect = true;
+                    totalScore += 5;
+                }
+            } else {
+                // Multiple choice
+                const selectedIndices = userAnswers[idx];
+                const correctIndices = q.variants
+                    .map((v, i) => v.isCorrect ? i : -1)
+                    .filter(i => i !== -1);
+
+                // Award points per correctly selected option (no penalty for wrong selections)
+                const perCorrect = correctIndices.length > 0 ? (5 / correctIndices.length) : 0;
+                selectedIndices.forEach(si => {
+                    if (q.variants[si] && q.variants[si].isCorrect) {
+                        totalScore += perCorrect;
+                    }
+                });
+            }
+        });
+
+        return totalScore;
+    }
+
+    // NEXT QUESTION
+    function nextQuestion() {
+        const q = questions[currentQuestionIndex];
+        const feedback = document.getElementById('feedbackMessage');
+
+        // If feedback is not shown yet, check answer first
+        if (!feedback.classList.contains('show')) {
+            checkCurrentAnswer();
+            updateStats();
+            return;
+        }
+
+        // Feedback is already shown, move to next question
+        if (currentQuestionIndex === questions.length - 1) {
+            showResults();
+            return;
+        }
+
+        currentQuestionIndex++;
+        // Reset feedback message for next question
+        feedback.classList.remove('show', 'feedback-correct', 'feedback-incorrect');
+        displayQuestion();
+    }
+
+    // GO BACK
+    function goBack() {
+        if (currentQuestionIndex > 0) {
+            currentQuestionIndex--;
+            // Reset feedback message
+            const feedback = document.getElementById('feedbackMessage');
+            feedback.classList.remove('show', 'feedback-correct', 'feedback-incorrect');
+            displayQuestion();
+        }
+    }
+
+    // SKIP QUESTION (user triggered)
+    function skipQuestion() {
+        const feedback = document.getElementById('feedbackMessage');
+        feedback.classList.remove('show', 'feedback-correct', 'feedback-incorrect');
+
+        const skipBtn = document.getElementById('skipBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        if (skipBtn) skipBtn.style.display = 'none';
+        if (nextBtn) nextBtn.disabled = false;
+
+        if (currentQuestionIndex === questions.length - 1) {
+            showResults();
+            return;
+        }
+
+        currentQuestionIndex++;
+        displayQuestion();
+    }
+
+    // SHOW RESULTS
+    function showResults() {
+        document.getElementById('quizScreen').classList.add('hidden');
+        document.getElementById('resultsScreen').classList.remove('hidden');
+
+        const totalScore = calculateScore();
+        const maxScore = questions.length * 5;
+
+        // Round displayed total score to whole points
+        const roundedScore = Math.round(totalScore);
+        const percentage = Math.round((roundedScore / maxScore) * 100);
+
+        document.getElementById('finalScore').textContent = `${roundedScore}/${maxScore}`;
+        document.getElementById('resultMessage').textContent = `Сіздің нәтижеңіз: ${percentage}%`;
+
+        // Посчитать количество полностью правильных и полностью неправильных вопросов
+        let correctQuestions = 0;
+        let answeredQuestionsCount = 0;
+
+        questions.forEach((q, idx) => {
+            const ua = userAnswers[idx];
+            if (ua === null || ua === undefined || (Array.isArray(ua) && ua.length === 0)) {
+                return; // пропустить неотвеченные
+            }
+
+            answeredQuestionsCount++;
+
+            if (q.type === 'question') {
+                if (ua !== null && ua !== undefined && q.variants[ua] && q.variants[ua].isCorrect) {
+                    correctQuestions++;
+                }
+            } else {
+                const selectedIndices = ua || [];
+                const correctIndices = q.variants
+                    .map((v, i) => v.isCorrect ? i : -1)
+                    .filter(i => i !== -1);
+
+                if (selectedIndices.length === correctIndices.length &&
+                    selectedIndices.every(i => q.variants[i] && q.variants[i].isCorrect)) {
+                    correctQuestions++;
+                }
+            }
+        });
+
+        const incorrectQuestions = answeredQuestionsCount - correctQuestions;
+        const resultsCounts = document.getElementById('resultsCounts');
+        if (resultsCounts) {
+            resultsCounts.textContent = `Правильных: ${correctQuestions} • Неправильных: ${incorrectQuestions}`;
+        }
+
+        // Display result items
+        const resultsList = document.getElementById('resultsList');
+        resultsList.innerHTML = '';
+
+        questions.forEach((q, idx) => {
+            let isCorrect = false;
+            let userAnswerText = '';
+            let correctAnswers = [];
+            let allAnswers = [];
+
+            const isNoVariants = !q.variants || q.variants.length === 0;
+
+            // Get all variants for display
+            if (!isNoVariants) {
+                allAnswers = q.variants.map((v, vIdx) => ({ text: v.text, idx: vIdx, isCorrect: v.isCorrect }));
+                correctAnswers = q.variants.filter(v => v.isCorrect).map(v => v.text);
+            } else {
+                allAnswers = [];
+                correctAnswers = [];
+            }
+
+            if (isNoVariants) {
+                userAnswerText = 'Сұрақта варианттар жоқ — пропущен';
+                isCorrect = false;
+            } else if (q.type === 'question') {
+                // Single choice
+                if (userAnswers[idx] !== null && userAnswers[idx] !== undefined) {
+                    userAnswerText = q.variants[userAnswers[idx]].text;
+                    isCorrect = q.variants[userAnswers[idx]].isCorrect;
+                }
+            } else {
+                // Multiple choice
+                const selectedIndices = userAnswers[idx];
+                if (selectedIndices && selectedIndices.length > 0) {
+                    const selectedAnswers = selectedIndices.map(i => q.variants[i]);
+                    userAnswerText = selectedAnswers.map(a => a.text).join(', ');
+
+                    const correctIndices = q.variants
+                        .map((v, i) => v.isCorrect ? i : -1)
+                        .filter(i => i !== -1);
+
+                    isCorrect = selectedIndices.length === correctIndices.length &&
+                        selectedIndices.every(i => q.variants[i].isCorrect);
+                }
+            }
+
+            const resultItem = document.createElement('div');
+            resultItem.className = `result-item ${isCorrect ? 'correct' : 'incorrect'}`;
+
+            let content = `<div class="result-number">${isCorrect ? '✓ Дұрыс' : '✗ Қате'} сұрақ ${idx + 1}</div>`;
+            content += `<div class="result-question">${q.question}</div>`;
+            
+            // Show all answer options (or note there are none)
+            content += `<div style="margin: 12px 0 8px 0; font-size: 12px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;">Барлық варианттар:</div>`;
+            
+            if (isNoVariants) {
+                content += `<div class="result-unselected-answer" style="padding:10px;">(Вопрос не содержал вариантов и был пропущен)</div>`;
+            } else {
+                allAnswers.forEach((answer) => {
+                const isCorrectAnswer = answer.isCorrect;
+                const isUserSelected = userAnswers[idx] && 
+                    (q.type === 'question' ? userAnswers[idx] === answer.idx : userAnswers[idx].includes(answer.idx));
+                
+                let answerClass = 'result-answer';
+                let indicator = '○';
+                
+                if (isCorrectAnswer && isUserSelected) {
+                    answerClass += ' result-correct-answer';
+                    indicator = '✓';
+                } else if (isCorrectAnswer && !isUserSelected) {
+                    answerClass += ' result-correct-answer';
+                    indicator = '✓';
+                } else if (!isCorrectAnswer && isUserSelected) {
+                    answerClass += ' result-user-answer';
+                    indicator = '✗';
+                } else {
+                    answerClass += ' result-unselected-answer';
+                    indicator = '○';
+                }
+                
+                content += `<div class="${answerClass}"><span class="result-icon">${indicator}</span>${answer.text}</div>`;
+                });
+            }
+            
+            content += `<div style="margin-top: 12px; font-weight: 600; padding: 8px; background: rgba(255,255,255,0.05); border-radius: 4px;\"><span class="result-icon" style="color: #fbbf24;\">→</span> Сіздің жауап: ${userAnswerText || 'Жауап берілмеген'}</div>`;
+
+            resultItem.innerHTML = content;
+            resultsList.appendChild(resultItem);
+        });
+    }
+
+    // RESTART QUIZ
+    function restartQuiz() {
+        currentQuestionIndex = 0;
+        userAnswers = [];
+        answeredQuestions = 0;
+        questionAnswerStates = [];
+
+        document.getElementById('inputScreen').classList.remove('hidden');
+        document.getElementById('resultsScreen').classList.add('hidden');
+        document.getElementById('questionsInput').value = '';
+    }
+</script>
+
+</body>
+</html>
