@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Easy Quiz Maker</title>
+	<style>
+		:root{
+			--bg:#04050a; /* near black */
+			--dark-blue:#081530; /* deep blue */
+			--accent:#1e90ff; /* bright blue */
+			--card:#0b1b33; /* card background */
+			--muted:#9fb0d6;
+			--white:#ffffff;
+		}
+		html,body{height:100%;margin:0;font-family:Segoe UI, Roboto, Arial, sans-serif;background:linear-gradient(180deg,var(--bg),var(--dark-blue));color:var(--white)}
+		.wrap{min-height:100%;display:flex;flex-direction:column;align-items:center;padding:36px 18px}
+		header{max-width:980px;display:flex;flex-direction:column;align-items:center;gap:6px}
+		h1{margin:0;font-size:28px}
+		p.lead{margin:0;color:var(--muted)}
+		.cards{display:flex;gap:20px;margin-top:28px;flex-wrap:wrap;justify-content:center}
+		.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.04);width:320px;min-height:160px;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(3,8,20,0.6);display:flex;flex-direction:column;justify-content:space-between}
+		.card h3{margin:0 0 8px 0}
+		.card p{margin:0;color:var(--muted)}
+		.actions{display:flex;gap:10px;margin-top:14px}
+		a.btn{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600;color:var(--white);background:var(--accent);box-shadow:0 6px 14px rgba(30,144,255,0.12)}
+		a.ghost{background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--muted);font-weight:600}
+		a.btn:hover{transform:translateY(-2px)}
+		footer{margin-top:36px;color:var(--muted);font-size:13px}
+		@media (max-width:740px){.cards{flex-direction:column;align-items:stretch}.card{width:100%}}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header>
+			<h1>Easy Quiz Maker</h1>
+			<p class="lead">Выберите действие: создайте новый тест вручную или откройте готовые тесты.</p>
+		</header>
+
+		<main class="cards" role="main">
+			<section class="card" aria-labelledby="create-title">
+				<div>
+					<h3 id="create-title">Создать тест вручную</h3>
+					<p>Добавляйте вопросы и варианты ответов прямо в форме — удобно для быстрых опросов и викторин.</p>
+				</div>
+				<div class="actions">
+					<a class="btn" href="MakeQuizTxt.html">Создать тест</a>
+					<a class="ghost" href="MakeQuizTxt.html">Подробнее</a>
+				</div>
+			</section>
+
+			<section class="card" aria-labelledby="open-title">
+				<div>
+					<h3 id="open-title">Открыть готовые тесты</h3>
+					<p>Загрузите или откройте готовые файлы с вопросами для редактирования и запуска.</p>
+				</div>
+				<div class="actions">
+					<a class="btn" href="MakeQuizTxt%20copy.html">Открыть тесты</a>
+					<a class="ghost" href="MakeQuizTxt%20copy.html">Подробнее</a>
+				</div>
+			</section>
+		</main>
+
+		<footer>Тёмная тема — цвета: белый / тёмно-синий / чёрный</footer>
+	</div>
+</body>
+</html>
+
