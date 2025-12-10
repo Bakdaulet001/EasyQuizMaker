@@ -1,10 +1,33 @@
+<question>Объект атрибуты - бұл…
+<variant>Объектінің қасиеттері мен сипаттамалары
+<variant>Класс
+<variant>объект күйі
+<variant>әдіс
+<variant>қасиет
+<question>Ақиқат пікірді көрсетіңіз
+<variant>Объект – бұл нақты әлемдегі заттың, құбылыстың немесе ұғымның моделі
+<variant>Кодты шифрлау үшін
+<variant>Деректерді кездейсоқ сұрыптау үшін
+<variant>Браузерді орнату үшін
+<variant>Серверді өшіру үшін
+<question>Обьектілер дегеніміз…
+<variant>Белгілі бір қасиеттері мен күйі бар нақтылы немесе дерексіз мәндер
+<variant>Кодты шифрлау үшін
+<variant>Деректерді кездейсоқ сұрыптау үшін
+<variant>Браузерді орнату үшін
+<variant>Серверді өшіру үшін
+<question>Обьектілер мен қасиеттермен берілетін обьектілердің жиынтығы – бұл...
+<variant>Класс
+<variant>құбылыс
+<variant>объект күйі
+<variant>әдіс
+<variant>қасиет
 <question>Қайсыбір әрекетке объектінің жауап ретінде өзгеру күйі–
 <variant>құбылыс
 <variant>Класс
 <variant>объект күйі
 <variant>әдіс
 <variant>қасиет
-<question>Обьект орындай алатын сипаттамасы – бұл …сипаттамасы – бұл …
 <question>Обьект орындай алатын әрекет - бұл…
 <variant>әдіс
 <variant>Класс
@@ -23,7 +46,162 @@
 <variant>оқиға
 <variant>әдіс
 <variant>қасиет
-<question2>Программалауқұралдарыныңмысалдары:
+<question>Класс – бұл…
+<variant>әдістер мен қасиеттердің бірдей болуымен сипатталатын обьектілердің жиынтығы
+<variant>қандай да бір әрекетке жауап беретін обьектілердің қалып-күйінің өзгеруі
+<variant>обьект орындай алатын әрекет
+<variant>объект сипаттамасы
+<variant>қасиеттер мен әдістердің жиынтығы
+<question>Класста сипатталған және оның салаларында жұмыс істеуге арналған процедуралар мен функциялар
+<variant>Әдістер
+<variant>Қасиеттер
+<variant>Класс
+<variant>Объект
+<variant>Оқиға
+<question>Енгізу кірісіне реттелетін жауап жасау үшін жасалған процедуралық тип қасиеті
+<variant>Оқиға
+<variant>Әдістер
+<variant>Қасиеттер
+<variant>Класс
+<variant>Объект
+<question>Мәндері сандар немесе жолдар деп аталатын қасиеттер
+<variant>Атрибуттар (өрістер)
+<variant>Санатталған (перечислимые)
+<variant>Күрделі
+<variant>Айнымалы
+<variant>Кірістірілген
+<question>Алдын ала анықталған жиынтықтан (тізімді) алатын қасиеттер
+<variant>Қарапайым
+<variant>Санатталған (перечислимые)
+<variant>Күрделі
+<variant>Айнымалы
+<variant>Кірістірілген
+<question>Кірістірілген мәндерді (немесе нысандарды) қолдайтын қасиеттер
+<variant>Кірістірілген
+<variant>Санатталған (перечислимые)
+<variant>Күрделі
+<variant>Қарапайым
+<variant>Айнымалы
+<question>Екі ықтимал таңдау болған кезде таңдау үшін Java тілінің қандай құрылымы пайдаланылады
+<variant>if-then-else
+<variant>for
+<variant>do_while
+<variant>goto
+<variant>case-of
+<question>Қай оператор басқаруды белгіленген операторға (өтуді) беруді ұйымдастырады
+<variant>goto
+<variant>if-then-else
+<variant>for
+<variant>do_while
+<variant>switch
+<question>Циклды алғышартты (предусловие) белгілейтін Java операторы
+<variant>while_do
+<variant>if-then-else
+<variant>for
+<variant>goto
+<variant>switch
+<question>Параметрлермен берілетін циклды білдіретін Java операторы
+<variant>for
+<variant>if-then-else
+<variant>do_while
+<variant>goto
+<variant>switch
+<question>Көпмәнді тармақталу болғанда таңдау үшін қолданылатын Java тілінің құрылымы
+<variant>case-of 
+<variant>if-then-else
+<variant>do_while
+<variant>goto
+<variant>switch
+<question>Шарт ақиқат болғанша бір рет орындалып қайталанатын Java тілінің құрылымы
+<variant>repeat-until
+<variant>continue
+<variant>break
+<variant>return
+<variant>while-do
+<question>Кейбір шарт сақталып тұрғанша қайтанатын Java тілінің құрылымы
+<variant>while-do
+<variant>repeat-until
+<variant>continue
+<variant>break
+<variant>return
+<question>Транслятор (компилятор немесе интерпретатор) қандай программалық қамсыздандыру типіне жатады?
+<variant>Жүйелік программалық қамсыздандыруға жатады
+<variant>Жобаны аяқтау уақыты
+<variant>Тест кезеңі
+<variant>Қателер журналы
+<variant>Құжаттау процесі
+<question>Программалау технологиясы дегеніміз не?
+<variant>Бағдарламаны әзірлеу тәсілдері мен құралдарының жиынтығы
+<variant>Интернетті пайдалану ережесі
+<variant>Компьютердің бағасы
+<variant>Файл атын өзгерту әдісі
+<variant>Ойын жасау процесі
+<question>Agile жобаларында «спринт» нені білдіреді?
+<variant>Қысқа мерзімді даму циклі
+<variant>Жобаны аяқтау уақыты
+<variant>Тест кезеңі
+<variant>Қателер журналы
+<variant>Құжаттау процесі
+<question>UML диаграммасы не үшін қолданылады?
+<variant>Жүйенің құрылымы мен процестерін бейнелеу үшін
+<variant>Кодты шифрлау үшін
+<variant>Деректерді кездейсоқ сұрыптау үшін
+<variant>Браузерді орнату үшін
+<variant>Серверді өшіру үшін
+<question>Программалау құралдарына не жатады?
+<variant>IDE және компиляторлар
+<variant>Принтер мен сканер
+<variant>Қағаз кестелер
+<variant>USB флешка
+<variant>Мәтіндік редактор
+<question>Ақпараттық жүйенің тиімділігін анықтайтын фактор:
+<variant>Өңдеу жылдамдығы мен дәлдігі
+<variant>Құжат саны
+<variant>Қолданушының жасы
+<variant>Түстердің үйлесімі
+<variant>Электр қуатының бағасы
+<question>Ақпараттық жүйелердің басты мақсаты?
+<variant>Ақпаратты жинау, өңдеу және тарату
+<variant>Тек интернетке қосылу
+<variant>Тек код жазу
+<variant>Тек құжаттама жасау
+<variant>Тек деректерді сақтау
+<question>Каскадты модельдің негізгі ерекшелігі?
+<variant>Қатаң кезеңдік орындалу
+<variant>Итеративті даму
+<variant>Тек тестілеу
+<variant>Тек сүйемелдеу
+<variant>Тек код жазу
+<question>Спиральды модельдің әр итерациясында не бағаланады?
+<variant>Тәуекелдер
+<variant>Код сапасы
+<variant>Тек деректер
+<variant>Тек құжаттама
+<variant>Барлық жауап дұрыс
+<question2>Java бағдарламасын main әдісінсіз іске қосуға тырысқанда не болады?
+<variantright>Компиляция сәтті өтуі мүмкін
+<variantright> Іске қосу кезінде қате пайда болады (Main method not found қатесі)
+<variant>Integer
+<variant>Boolean
+<variant> String
+<variant>Double
+<variant>long
+<question2>Java-дағы интерфейстер туралы қандай мәлімдемелер дұрыс?
+<variantright>Интерфейстерде әдістердің тек тақырыптары болады (абстрактілі әдістер)
+<variantright>Класс бірнеше интерфейсті жүзеге асыра алады (implements)
+<variant>Құжатсыз басқару
+<variant>Баяу жоспар
+<variant>Тексерусіз бақылау
+<variant>Қате есептеу
+<question2>Төмендегі түрлердің қайсысы Java-да қарабайыр?
+<variantright>char
+<variantright> float
+<variant>Integer
+<variant>Boolean
+<variant> String
+<variant>Double
+<variant>long
+<question2>Программалау құралдарының мысалдары:
 <variantright>Visual Studio
 <variantright>PyCharm
 <variant>Excel
@@ -31,30 +209,116 @@
 <variant>Word
 <variant>Notepad
 <question2>Kanban қағидалары:
-<variantright>Жұмысағынынвизуализациялау
-<variantright>Процестіүздіксізжетілдіру
-<variant>Құжатсызбасқару
-<variant>Баяужоспар
-<variant>Тексерусізбақылау
-<variant>Қатеесептеу
-<question2>Жүйелікжобалаудыңмақсаттары:
-<variantright>Жүйеқұрылымыннақтылау
-<variantright>Функционалдықталаптардыіскеасыру
-<variant>Тексынау
-<variant>Кездейсоқжоспар
-<variant>Файлатауынөзгерту
-<variant>Құжатсызпроцесс
-<question2>Модельдеудіңәдістері:
+<variantright>Жұмыс ағынын визуализациялау
+<variantright>Процесті үздіксіз жетілдіру
+<variant>Құжатсыз басқару
+<variant>Баяу жоспар
+<variant>Тексерусіз бақылау
+<variant>Қате есептеу
+<question2>Жүйелік жобалаудың мақсаттары:
+<variantright>Жүйе құрылымын нақтылау
+<variantright>Функционалдық талаптарды іске асыру
+<variant>Тек сынау
+<variant>Кездейсоқ жоспар
+<variant>Файл атауын өзгерту
+<variant>Құжатсыз процесс
+<question2>Модельдеудің әдістері:
 <variantright>DFD (Data Flow Diagram)
 <variantright>ER (Entity-Relationship)
 <variant>PDF диаграмма
 <variant>DOC схема
 <variant>TXT модель
 <variant>XML ағаш
+<question2>Java-дағы мұрагерлік туралы қандай мәлімдемелер дұрыс?
+<variantright> бірнеше болуы мүмкін
+<variantright> ұқсас нысандарды сипаттау үшін жасалған код көлемін азайтуға көмектеседі
+<variant>ArrayList Set интерфейсін жүзеге асырады
+<variant>HashSet қайталануға мүмкіндік береді
+<variant>HashMap List интерфейсін жүзеге асырады
+<variant>Queue-дерексіз класс
+<variant>Stack Java Collections Framework құрамына кірмейді
+<question2>Java-дағы жинақтар туралы не айтуға болады?
+<variantright>LinkedList List және Deque интерфейстерін жүзеге асырады
+<variantright>TreeSet элементтерді сұрыптауды қолдайды
+<variant>ArrayList Set интерфейсін жүзеге асырады
+<variant>HashSet қайталануға мүмкіндік береді
+<variant>HashMap List интерфейсін жүзеге асырады
+<variant>Queue-дерексіз класс
+<variant>Stack Java Collections Framework құрамына кірмейді
+<question2>Java-дағы ерекшеліктер (exceptions) үшін қандай мәлімдемелер дұрыс?
+<variantright>Қателерді өңдеу үшін қолданылады
+<variantright>try-catch-finally блогы арқылы ұсталып өңделеді
+<variant>ArrayList Set интерфейсін жүзеге асырады
+<variant>HashSet қайталануға мүмкіндік береді
+<variant>HashMap List интерфейсін жүзеге асырады
+<variant>Queue-дерексіз класс
+<variant>Stack Java Collections Framework құрамына кірмейді
+<question3>Ақпараттық жүйенің негізгі құрамдас бөліктері?
+<variantright> Аппараттық құралдар
+<variantright> Бағдарламалық қамтамасыз ету
+<variantright> Интернет хаттамалары
+<variant>Деректер
+<variant>Адамдар
+<variant>Процедуралар
+<variant> Тек код
+<question3>Agile әдіснамасының басты ерекшеліктері?
+<variantright> Итеративті даму
+<variantright> Икемділік
+<variantright> Командадағы үздіксіз байланыс
+<variant>Тек соңғы өнімді бағалау
+<variant>Қатаң жоспарға сүйену
+<variant>Тек құжаттамаға назар аудару
+<variant>Тек код жазу
+<variant>Тек интернетке қосылу
+<question3>Scrum әдісінде қолданылатын негізгі ұғымдар?
+<variantright> Product Backlog
+<variantright> Sprint
+<variantright> Scrum Master
+<variant>Тек тестілеу
+<variant>Тек құжаттама жасау
+<variant>Тек деректерді сақтау
+<variant>Тек интернетке қосылу
+<variant>Тек код жазу
+<question3>Спиральды модельдің басты ерекшеліктері?
+<variantright> Қайталанатын циклдер
+<variantright> Тәуекелдерді басқару
+<variantright> Клиентпен кері байланыс
+<variant>Тек тестілеу
+<variant>Тек құжаттама жасау
+<variant>Тек деректерді сақтау
+<variant>Тек интернетке қосылу
+<variant>Тек код жазу
+<question3>DevOps әдіснамасының негізгі мақсаттары?
+<variantright> Әзірлеу мен операцияны біріктіру
+<variantright> Жылдам жеткізу
+<variantright> Үздіксіз интеграция
+<variant>Тек тестілеу
+<variant>Тек құжаттама жасау
+<variant>Тек деректерді сақтау
+<variant>Тек интернетке қосылу
+<variant>Тек код жазу
+<question3>UML диаграммаларының қолданылу салалары?
+<variantright> Жүйені модельдеу
+<variantright> Құрылымды бейнелеу
+<variantright> Процестерді сипаттау
+<variant>Кодты орындау
+<variant>Деректерді сақтау
+<variant>Тек интернетке қосылу
+<variant>Тек тестілеу
+<variant>Тек құжаттама
+<question3>Ақпараттық жүйелердің өмірлік циклінің кезеңдері?
+<variantright> Талдау (жоспарлау)
+<variantright> Жобалау
+<variantright> Жүзеге асыру (енгізу, іске қосу)
+<variant>Қолданушылардың қанағаттануы
+<variant>Жүйе архитектурасы
+<variant>Тек интернет хаттамалары
+<variant>Тек деректерді сақтау
+<variant>Тек құжаттама
 <question3>ISO/IEC 25010 стандарты сипаттайтын негізгі аспектілер?
-<variantright>Бағдарламалық өнім сапасы
-<variantright>Функционалдық жарамдылық
-<variantright>Сенімділік
+<variantright> Бағдарламалық өнім сапасы
+<variantright> Функционалдық жарамдылық
+<variantright> Сенімділік
 <variant>Қолданушылардың қанағаттануы
 <variant>Жүйе архитектурасы
 <variant>Тек интернет хаттамалары
@@ -67,5 +331,32 @@
 <variant>Бағандар құру
 <variant>Файл пішімі
 <variant>Құжат атауы
-<variant>Кестежазу
-<variant>Қатеенгізу
+<variant>Кесте жазу
+<variant>Қате енгізу
+<question3>Ақпараттық жүйе құрамына кіретіндер:
+<variantright>Аппараттық қамтамасыз ету (Hardware)
+<variantright>Бағдарламалық қамтамасыз ету
+<variantright>Адам ресурстары / Пайдаланушылар (People / Users)
+<variant>Кешігу
+<variant>Төмен тиімділік
+<variant>Баяу даму
+<variant>Тұрақсыз код
+<variant>Құжатсыздық
+<question3>Agile әдіснамасын қолдану нәтижесі:
+<variantright>Өнім сапасын арттыру
+<variantright>Клиент қанағаттанушылығы
+<variantright>Жылдам жеткізу
+<variant>Кешігу
+<variant>Төмен тиімділік
+<variant>Баяу даму
+<variant>Тұрақсыз код
+<variant>Құжатсыздық
+<question3>Жүйе архитектурасын жобалауда ескерілетін факторлар:
+<variantright>Өнімділік
+<variantright>Қолданбаның сенімділігі
+<variantright>Масштабталу қабілеті
+<variant>Кешігу
+<variant>Төмен тиімділік
+<variant>Баяу даму
+<variant>Тұрақсыз код
+<variant>Құжатсыздық
