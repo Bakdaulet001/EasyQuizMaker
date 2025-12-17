@@ -1217,40 +1217,59 @@
         startQuiz();
     }
 
-    // SYSTEM TESTS: attempt to populate a simple system test linked to akпараттык жуйелер.txt
+    // SYSTEM TESTS FILES CONFIGURATION - легко добавляй файлы сюда
+    const SYSTEM_TESTS = [
+        { name: 'Ақпараттық Жүйелер Модуль 2', file: 'акпараттык жуйелер.txt' },
+        { name: 'Ағылшын Модуль 1', file: 'Анг_Моудль.txt' },
+        // Добавь ещё файлы:
+        // { name: 'Название теста 2', file: 'file2.txt' },
+        // { name: 'Название теста 3', file: 'file3.txt' }
+    ];
+
+    // SYSTEM TESTS: attempt to populate system tests linked to files
     function loadSystemTests() {
         const container = document.getElementById('systemTestsContainer');
         const list = document.getElementById('systemTestsList');
         list.innerHTML = '';
 
-        // We always show one system test entry which loads questions from the local file when clicked
-        const item = document.createElement('div');
-        item.className = 'saved-test-item';
-        item.style.cursor = 'pointer';
-        item.onclick = () => startSystemTest();
+        // Перебираем все системные тесты из конфигурации
+        SYSTEM_TESTS.forEach((testConfig, index) => {
+            const item = document.createElement('div');
+            item.className = 'saved-test-item';
+            item.style.cursor = 'pointer';
+            item.onclick = () => startSystemTest(index);
 
-        const name = document.createElement('div');
-        name.className = 'saved-test-name';
-        name.textContent = 'акпараттык жуйелер.txt (системный)';
+            const name = document.createElement('div');
+            name.className = 'saved-test-name';
+            name.textContent = testConfig.name;
 
-        const info = document.createElement('div');
-        info.className = 'saved-test-info';
-        info.textContent = 'Загрузка вопросов из файла';
+            const info = document.createElement('div');
+            info.className = 'saved-test-info';
+            info.textContent = 'Загрузка вопросов из файла';
 
-        item.appendChild(name);
-        item.appendChild(info);
-        list.appendChild(item);
+            item.appendChild(name);
+            item.appendChild(info);
+            list.appendChild(item);
+        });
 
         container.style.display = 'block';
     }
 
-    async function startSystemTest() {
+    async function startSystemTest(fileIndex) {
+        // Получаем конфигурацию файла по индексу
+        const testConfig = SYSTEM_TESTS[fileIndex];
+        if (!testConfig) {
+            alert('Конфигурация теста не найдена!');
+            return;
+        }
+
         // Try to fetch the file and parse questions, then show quick dialog
+        const fileName = testConfig.file;
         const candidates = [
-            'http://127.0.0.1:8000/акпараттык%20жуйелер.txt',
-            'http://127.0.0.1:8000/questions.txt',
-            'акпараттык жуйелер.txt',
-            'акпараттык%20жуйелер.txt'
+            `http://127.0.0.1:8000/${encodeURIComponent(fileName)}`,
+            `http://127.0.0.1:8000/${fileName.replace(/\s+/g, '%20')}`,
+            fileName,
+            fileName.replace(/\s+/g, '%20')
         ];
 
         let text = null;
@@ -1266,18 +1285,18 @@
         }
 
         if (!text) {
-            alert('Не удалось загрузить системный файл akпараттык жуйелер.txt. Убедитесь, что он доступен.');
+            alert(`Не удалось загрузить файл: ${testConfig.name}. Убедитесь, что файл "${fileName}" доступен.`);
             return;
         }
 
         allParsedQuestions = parseQuestions(text);
         if (allParsedQuestions.length === 0) {
-            alert('В файле не найдено вопросов.');
+            alert(`В файле "${testConfig.name}" не найдено вопросов.`);
             return;
         }
 
         // Show quick start dialog with default settings
-        const settings = { questionCount: 'all', testName: 'Системный тест' };
+        const settings = { questionCount: 'all', testName: testConfig.name };
         testSettings = settings;
         showQuickStartDialog(settings);
     }
