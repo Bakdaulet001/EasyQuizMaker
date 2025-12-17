@@ -1,0 +1,148 @@
+<question>Match the definition with the word: The CD and DVD formats that can be rewritten many times – 
+<variant>CD-RW / DVD-RW
+<question>Match the definition with the word: The CD and DVD formats that can be written to by the user only once
+<variant>CD-R / DVD-R
+<question>Match the definition with the word: The CD and DVD formats that can be read by a computer but not written to
+<variant>CD-ROM / DVD-ROM
+<question>Match the definition with the word: The type of cards used in digital cameras.
+<variant>Memory cards (SD cards)
+<question>Match the definition with the word: The type of drive that plugs into a USB port and lets you share photos and music with friends
+<variant>Flash drive / USB drive
+<question>Match the definition with the word: The meaning of “multitasking”.
+<variant>Running several programs at the same time
+<question>Match the definition with the word: A multi-user OS used on large, powerful computer systems.
+<variant>UNIX
+<question>Match the definition with the word: The operating system that is freely distributed.
+<variant>Linux
+<question>Match the definition with the word: The operating system designed by Apple.
+<variant>macOS
+<question>Match the definition with the word: The OS created by Microsoft.
+<variant>Windows
+<question>Match the definition with the word: The meaning of WIMP in a graphical user interface (GUI).
+<variant>Windows, Icons, Menus, Pointer
+<question>Match the definition with the word: The arrow, controlled by the mouse, which lets you choose options from menus
+<variant>Pointer / Cursor
+<question>Match the definition with the word: The background screen that displays icons, representing programs, files and folders 
+<variant>Desktop
+<question>Match the definition with the word: Pictures representing programs or documents
+<variant>Icons
+<question>Match the definition with the word: A list of options that appear below a menu bar when you click on an item.
+<variant>Drop-down menu / Pull-down menu
+<question>Match the definition with the word: It shows the programs, documents and other folders contained within the folder.
+<variant>Folder window / File explorer
+<question>Match the definition with the word: A program used for preparing documents and letters.
+<variant>Word processor (e.g. MS Word)
+<question>Match the definition with the word: A row of words that open up menus when selected.
+<variant>Menu bar
+<question>Match the definition with the word: The distinctive design of letters and characters, e.g. Arial, Courier
+<variant>Font
+<question>Match the definition with the word: Text printed in the top margin
+<variant>Header
+<question>Match the definition with the word: Text printed in the bottom margin
+<variant>Footer
+<question>Match the definition with the word: The way text is arranged on the page, including margins, paragraph format, columns, etc.
+<variant>Page layout / Formatting
+<question>Match the definition with the word: A function that enables you to combine two files into one
+<variant>Merge
+<question>Which type of graphics software is best for a person who wants to edit photos at home? 
+<variant>Photo editing software (e.g. Adobe Photoshop)
+<question>Which type of graphics software is best for an economist who wants to present statistics in a form that can be easily understood?
+<variant>Presentation or charting software (e.g. MS Excel)
+<question>Which type of graphics software is best for engineers who need to design the interior and exterior of a new aeroplane?
+<variant>CAD (Computer-Aided Design) software
+<question>Which type of graphics software is best for a company which needs to design and publish a magazine?
+<variant>Desktop publishing (DTP) software (e.g. Adobe InDesign)
+<question>Which type of graphics software is best for an artist who wants to produce illustrations and freehand drawings for a book?
+<variant>Drawing / Illustration software (e.g. Adobe Illustrator)
+<question>Which type of graphics software is best for an organization that needs to make maps and 3D virtual models of the surface of the Earth?
+<variant>GIS (Geographic Information System) software
+<question>Which type of graphics software is best for computer animators who make movies like Toy Story and Shrek?
+<variant>3D animation software (e.g. Autodesk Maya, Blender)
+<question>Give the English equivalent: рабочий стол
+<variant>Desktop
+<question>Give the English equivalent: құжат дайындау
+<variant>Prepare a document
+<question>Give the English equivalent: файлды қиып алу
+<variant>Cut a file
+<question>Give the English equivalent: жартылай қою қаріп
+<variant>Bold font
+<question>Give the English equivalent: курсивті қаріп
+<variant>Italic font
+<question>Give the English equivalent: асты сызылған қаріп
+<variant>Underlined font
+<question>Give the English equivalent: туралану (выравнивание)
+<variant>Alignment
+<question>Give the English equivalent: верхний колонтитул
+<variant>Header
+<question>Give the English equivalent: нижний колонтитул
+<variant>Footer
+<question>Give the English equivalent: біріктіру
+<variant>Merge
+<question>Give the English equivalent: строка меню
+<variant>Menu bar
+<question>Give the English equivalent: сөздерді тасымалдау
+<variant>Word wrap
+<question>Give the English equivalent: қаріп өлшемі
+<variant>Font size
+<question>Give the English equivalent: төменгі жақ (нижнее поле)
+<variant>Bottom margin
+<question>Give the English equivalent: папка
+<variant>Folder
+<question>Put the correct modal verb: You ______ take off your shoes if they are clean.
+<variant>don’t have to
+<question>Put the correct modal verb: Students ____   turn off their mobiles during lessons or the teacher will take them away.
+<variant>must
+<question>Put the correct modal verb: You _____ eat that bread. It’s a week old!
+<variant>mustn’t
+<question>Put the correct modal verb: If you are sixteen or under, you_____ bring a parent with you.
+<variant>must
+<question>Use the comparative or superlative: Ice is much (cold) than water. 
+<variant>colder
+<question>Use the comparative or superlative: The Pink Star diamond is (expensive) diamond in the world. 
+<variant>the most expensive
+<question>Use the comparative or superlative: Who do you think is (good) actor in Hollywood?
+<variant>the best
+<question>Use the comparative or superlative: Johnny Depp is (attractive) now than when he was younger.
+<variant>more attractive
+<question>Use the comparative and superlative adjective: In general, people in Australia are _______ than people in Africa, but people in Europe are ________. (happy)
+<variant>happier / the happiest
+<question>Use the comparative and superlative adjective: Cycling is _______ than walking to school, but trams are _________. (good)
+<variant>better / the best
+<question>Use the comparative and superlative adjective: In the UK, rugby is _________ than tennis, but football is _________. (popular)
+<variant>more popular / the most popular
+<question>Complete the first conditional sentence: If I (not go) out this morning, I (clean) the house.
+<variant>don’t go / will clean
+<question>Complete the first conditional sentence: If he (study) hard at university, he’ll get a degree. 
+<variant>studies
+<question>Complete the first conditional sentence: If you become a sports coach, you (be) really fit.
+<variant>will be
+<question>Complete the first conditional sentence: If I feel tired tomorrow, I (stay) in bed.
+<variant>will stay
+<question>Complete the first conditional sentence: If you refuse to go to work in America, you (improve) your English.
+<variant>won’t improve
+<question>How many pixels are there in a high-quality A4 photograph?
+<variant>About 8–10 million pixels (≈ 8–10 MP)
+<question>Which graphics program is most often used to edit bitmap images?
+<variant>Adobe Photoshop
+<question>_______ used by engineers and architects to design everything
+<variant>CAD software
+<question>What graphics program is most often used to edit vector images?
+<variant>Adobe Illustrator / CorelDRAW
+<question>This program allows cartographers to create detailed maps
+<variant>GIS (Geographic Information System)
+<question> Bitmaps translated from Latin means _______.
+<variant>Painted map” / “spotted picture
+<question>______ adds textures to each surface, and generates realistic reflections, shadows and highlights.
+<variant>Rendering
+<question>Programs that allow you to create pie charts, histograms and line graphs of all kinds for slide shows and reports
+<variant>Charting / Spreadsheet software (e.g. Excel)
+<question>What does the word "Vector" mean from Latin?
+<variant>Carrier
+<question>The formats for storing pixel images are ______ .
+<variant>BMP, JPEG, GIF, PNG, TIFF
+<question>_______ is a geometric figure with special properties, some of which are similar to objects in nature.
+<variant>Fractal
+<question>A program that is used to develop and publish books, newspapers, posters, advertisements, etc.
+<variant>Desktop publishing (DTP) software
+<question>_______ is the smallest unit of a bitmap image obtained using graphical information output systems.
+<variant>Pixel
