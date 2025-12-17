@@ -1,0 +1,600 @@
+<question>Chose the right form of future time clauses: You won’t pass the exam, ____you study harder.
+<variant>unless
+<variant>before
+<variant>if
+<variant>when
+<variant>as soon as
+<question>Chose the right form of future time clauses: They won’t get married___ they find a place to live 
+<variant>until
+<variant>before
+<variant>as soon as
+<variant>when
+<variant>if
+<question>Chose the right form of future time clauses: They said they’d phone us ___their plane lands
+<variant>as soon as
+<variant>until
+<variant>before
+<variant>unless
+<variant>when
+<question>Chose the right form of future time clauses: Don’t eat anything now! Wait ___ dinner’s ready.
+<variant>until
+<variant>as soon as
+<variant>before
+<variant>when
+<variant>unless
+<question>Chose the right form of future time clauses: My mother will go to bed ___ I come home.
+<variant>after
+<variant>as soon as
+<variant>before
+<variant>when
+<variant>unless
+<question>Complete the sentences with the correct form of the verb:  If we ____(arrive) earlier, we would have got better seats.
+<variant>had arrived
+<variant>will arrive
+<variant>arrive
+<variant>would arrive
+<variant>arrived
+<question>Complete the sentences with the correct form of the verb: She wouldn’t help you if she _______(not want) to.
+<variant>didn’t want
+<variant>won’t want
+<variant>hadn’t wanted
+<variant>wouldn’t want
+<variant>doesn’t want
+<question>Complete the sentences with the correct form of the verb: He ________ (not do) such a dangerous job unless he enjoyed it.
+<variant>wouldn’t do
+<variant>won’t do
+<variant>didn’t do
+<variant>doesn’t do
+<variant>hadn’t done
+<question>Complete the sentences with the correct form of the verb: His teacher won’t be angry if he ________ (tell) her the truth.
+<variant>tell
+<variant>had told
+<variant>told
+<variant>will tells
+<variant>has told
+<question>Complete the sentences with the correct form of the verb: If I were you, I ________ (buy) a more reliable car.
+<variant>would buy
+<variant>had bought
+<variant>will buy
+<variant>bought
+<variant>has bought
+<question>Complete the sentence with used to / didn’t use to / did … use to, or the present simple + usually: I ______ (behave) badly at school, but now I study hard.
+<variant>used to behave
+<variant>behave usually 
+<variant>used not to behave
+<variant>didn’t use behaved
+<variant>did have behaved
+<question>Complete the sentence with appropriate verb: He ________ (not / be) so quiet. He must be tired today
+<variant>isn’t usually
+<variant>weren’t
+<variant>wasn’t
+<variant>used not to be
+<variant>didn’t use to be
+<question>Complete the sentence with appropriate verb: ______ (you / work) in the Union Street office before you came here?
+<variant>did you use to work
+<variant>have you worked
+<variant>do you use to work
+<variant>you used to work
+<variant>do you usually work
+<question>Complete the sentence with appropriate verb: When we were children, we often ________ (go) swimming in the river.
+<variant>used to go
+<variant>didn’t use to go
+<variant>went
+<variant>use to go
+<variant>go usually
+<question>Complete the sentence with appropriate verb: I ______ (be) a sales manager, but then I trained to be a designer.
+<variant>used to be
+<variant>was
+<variant>didn’t use to be
+<variant>am usually
+<variant>was to be
+<question>Complete the sentence with the correct verb: Pupils in Britain can____  school when they’re 16.
+<variant>leave
+<variant>behave
+<variant>learn
+<variant>cheat
+<variant>take
+<question>Complete the sentence with the correct verb: I’ve never tried to ________ in an exam, because I think it is wrong.
+<variant>cheat
+<variant>behave
+<variant>learn
+<variant>do
+<variant>take
+<question>Complete the sentence with the correct verb: I don’t know why I went to school today. I didn’t _______ anything.
+<variant>learn
+<variant>behave
+<variant>cheat
+<variant>do
+<variant>take
+<question>Complete the sentence with the correct verb: I want to ________ French at university because I’d like to live in France when I graduate.
+<variant>study
+<variant>behave
+<variant>cheat
+<variant>do
+<variant>take
+<question>Complete the sentence with the correct verb: I have a really important exam tomorrow so I need to ________ tonight.
+<variant>revise
+<variant>behave
+<variant>cheat
+<variant>fail
+<variant>learn
+<question>Choose the right word to the definition: a piece of furniture with cupboards at the bottom and shelves above, to hold cups and plates, etc.
+<variant>dresser
+<variant>airy
+<variant>gallery
+<variant>entrance
+<variant>glass
+<question>Choose the right word to the definition: the door, gate, or opening where you go into a place
+<variant>entrance
+<variant>airy
+<variant>gallery
+<variant>glass
+<variant>patio
+<question>Choose the right word to the definition: a room where paintings are hung
+<variant>gallery 
+<variant>glass
+<variant>patio
+<variant>shutters
+<variant>airy
+<question>Choose the right word to the definition: wooden or metal covers which are fixed outside windows
+<variant>shutters
+<variant>airy
+<variant>glass
+<variant>patio
+<variant>entrance
+<question>Choose the right word to the definition: an area, usually behind a house, where people can sit and eat outside
+<variant>patio
+<variant>airy
+<variant>entrance
+<variant>dresser
+<variant>glass
+<question>Choose the right word to the definition: with a lot of fresh air inside
+<variant>airy
+<variant>gallery
+<variant>entrance
+<variant>dresser
+<variant>glass
+<question>Choose the right word to the definition: material which you can see through
+<variant>glass
+<variant>gallery
+<variant>entrance
+<variant>dresser
+<variant>shutter
+<question>Choose the same meaning to the following word: get rid of
+<variant>throw away
+<variant>be friendly with
+<variant>receive
+<variant>become
+<variant>arrive at/in
+<question>Choose the same meaning to the following word: get to know
+<variant>know somebody little by little
+<variant>be friendly with
+<variant>receive
+<variant>become
+<variant>arrive at/in
+<question>Choose the same meaning to the following word: get on with
+<variant>be friendly with 
+<variant>throw away 
+<variant>receive 
+<variant>become
+<variant>arrive at/in
+<question>Choose the same meaning to the following word: get in touch
+<variant>make contact with somebody
+<variant>become
+<variant>throw away
+<variant>be friendly with
+<variant>receive
+<question>Choose the same meaning to the following word: get a reply
+<variant>receive
+<variant>throw away
+<variant>become
+<variant>arrive at
+<variant>be friendly with
+<question>Choose the right suffix: move
+<variant>-ment
+<variant>-al
+<variant>-ity
+<variant>-ness
+<variant>-ion
+<question>Choose the right suffix: survive
+<variant>-al
+<variant>-ation
+<variant>-ness
+<variant>-ion
+<variant>-ity
+<question>Choose the right suffix: relax
+<variant>-ation
+<variant>-ment
+<variant>-ness
+<variant>-ion
+<variant>-ity
+<question>Choose the right suffix: similar
+<variant>-ity
+<variant>-ment
+<variant>-ion 
+<variant>-ness
+<variant>-al
+<question>Choose the right suffix: propose
+<variant>-al
+<variant>-ment
+<variant>-ness
+<variant>-ity
+<variant>-ion
+<question>Choose the right suffix: govern
+<variant>-ment
+<variant>-ness
+<variant>-ation
+<variant>-ion
+<variant>-ity
+<question>Make the right word collocation: ______teacher’s salaries
+<variant>increase
+<variant>encourage
+<variant>reduce
+<variant>protect
+<variant>promote
+<question>Make the right word collocation: ______unemployment
+<variant>reduce
+<variant>increase
+<variant>ban
+<variant>protect
+<variant>promote
+<question>Make the right word collocation: ______smoking in streets and parks
+<variant>ban 
+<variant>reduce
+<variant>protect
+<variant>promise
+<variant>encourage 
+<question>Make the right word collocation: ______wildlife
+<variant>protect
+<variant>reduce
+<variant>promise
+<variant>encourage
+<variant>promote
+<question>Make the right word collocation: ______national products abroad
+<variant>promote
+<variant>reduce
+<variant>ban
+<variant>encourage
+<variant>protect
+<question>Make the right word collocation: ______people to do sport
+<variant>encourage
+<variant>reduce
+<variant>ban
+<variant>increase
+<variant>protect
+<question>Choose the right question word: In Scotland, boys have to wear a kilt to school.
+<variant>why
+<variant>who
+<variant>where
+<variant>when
+<variant>what
+<question>Choose the right question word: In Iceland, you mustn’t take the dog into the city centre.
+<variant>where
+<variant>who
+<variant>why
+<variant>whose
+<variant>when
+<question>Choose the right question word: In China, when you use chopsticks you shouldn’t leave them upright in the bowl. It brings bad luck.
+<variant>why
+<variant>when
+<variant>whose
+<variant>what
+<variant>who
+<question>Choose the right question word: In France, you are not allowed to call a pig ‘Napoleon’
+<variant>what
+<variant>when
+<variant>who
+<variant>where
+<variant>whose
+<question>Choose the right question word: In Russia, men should take of their gloves when they shake somebody’s hand.
+<variant>when
+<variant>who
+<variant>what
+<variant>whose
+<variant>which
+<question>Choose the right question word: He spends a lot of time on the Internet. 
+<variant>how much
+<variant>whose
+<variant>what
+<variant>when
+<variant>how many
+<question> Make sentences with the present perfect continuous(and for/since if necessary): she/work there/2005
+<variant>She’s been working there since2005
+<variant>She is working there for 2005
+<variant>She worked there for 2005
+<variant>She was working there since 2005
+<variant>She’s worked there since 2005
+<question>Make sentences with the present perfect continuous(and for/since if necessary): how long/they/go out together?
+<variant>How long have they been going out together?
+<variant>How long they have been going out together?
+<variant>How long were they going out together?
+<variant>How long have they gone out together?
+<variant>How long are they been going out together?
+<question>Make sentences with the present perfect continuous(and for/since if necessary): I/ rent this flat/three years.
+<variant>I’ve been renting this flat for three years.
+<variant>I had renting this flat for three years.
+<variant>I’m renting this flat for three years.
+<variant>I was renting this flat for three years.
+<variant>I’ve  renting this flat for three years.
+<question>Make sentences with the present perfect continuous(and for/since if necessary): the lift/ work/ 10 o’clock.
+<variant>The lift hasn’t been working since 10 o’clock.
+<variant>The lift isn’t  worked since 10 o’clock.
+<variant>The lift wasn’t working since 10 o’clock.
+<variant>The lift hasn’t  worked since 10 o’clock.
+<variant>The lift hasn’t  working since 10 o’clock.
+<question>Make sentences with the present perfect continuous(and for/since if necessary):  I/study English/ two years.
+<variant>I’ve been studying English for two years..
+<variant>I’ve studying English for two years.
+<variant>I studied English for two years. 
+<variant>I’ve studied English for two years.
+<variant>I was studying English for two years 
+<question>Match the phrasal verb with the definition: stop(doing something)
+<variant>give up
+<variant>turn up
+<variant>throw away
+<variant>set up
+<variant>give away
+<question>Match the phrasal verb with the definition: start a new company or organization
+<variant>set up
+<variant>turn up
+<variant>give away
+<variant>look after
+<variant>throw away
+<question>Match the phrasal verb with the definition: arrive, appear
+<variant>turn up
+<variant>throw away 
+<variant>set up
+<variant>look after 
+<variant>give away
+<question>Match the phrasal verb with the definition: give something to somebody without wanting anything in return
+<variant>give away
+<variant>set up
+<variant>throw away
+<variant>turn up
+<variant>look after
+<question>Match the phrasal verb with the definition: be responsible for somebody or something
+<variant>look after
+<variant>give up
+<variant>throw away
+<variant>give away
+<variant>set up
+<question>Choose the synonym for the strong adjective: tiny
+<variant>very small
+<variant>very tired
+<variant>very big
+<variant>very angry
+<variant>very good
+<question>Choose the synonym for the strong adjective: delicious
+<variant>very tasty
+<variant>very dirty
+<variant>very angry
+<variant>very hot
+<variant>very tired
+<question>Choose the synonym for the strong adjective: exhausted
+<variant>very tired
+<variant>very dirty
+<variant>very big
+<variant>very small
+<variant>very tasty
+<question>Choose the synonym for the strong adjective: filthy
+<variant>very dirty
+<variant>very tired
+<variant>very tasty
+<variant>very good
+<variant>very angry
+<question>Choose the synonym for the strong adjective: great
+<variant>very good
+<variant>very dirty
+<variant>very tasty
+<variant>very tired
+<variant>very angry
+<question>Choose the synonym for the strong adjective: freezing
+<variant>very cold
+<variant>very angry
+<variant>very tired
+<variant>very good
+<variant>very dirty
+<question>Choose the synonym for the strong adjective: furious
+<variant>very angry
+<variant>very hot
+<variant>very good
+<variant>very dirty
+<variant>very tired
+<question>Choose the synonym for the strong adjective: starving
+<variant>very hungry
+<variant>very dirty
+<variant>very tired
+<variant>very good
+<variant>very hot
+<question>Choose the synonym for the strong adjective: terrified
+<variant>very afraid of
+<variant>very hot
+<variant>very angry
+<variant>very dirty
+<variant>very cold
+<question>Choose the synonym for the strong adjective: boiling
+<variant>very hot
+<variant>very dirty
+<variant>very angry
+<variant>very bad
+<variant>very cold
+<question>Match the nouns to make compounds: car
+<variant>crash
+<variant>jam
+<variant>station
+<variant>hour
+<variant>limit
+<question> Match the nouns to make compounds: rush
+<variant>hour
+<variant>belt
+<variant>station
+<variant>jam
+<variant>limit
+<question> Match the nouns to make compounds: speed
+<variant>limit
+<variant>jam
+<variant>fine
+<variant>station
+<variant>belt
+<question> Match the nouns to make compounds: pedestrian
+<variant>area
+<variant>station
+<variant>fine
+<variant>belt
+<variant>jam
+<question> Match the nouns to make compounds: cycle
+<variant>lane
+<variant>jam
+<variant>belt
+<variant>station
+<variant>fine
+<question> Match the nouns to make compounds: seat
+<variant>belt
+<variant>jam
+<variant>station
+<variant>traffic
+<variant>fine
+<question> Match the nouns to make compounds: parking
+<variant>fine
+<variant>jam
+<variant>rank
+<variant>station
+<variant>traffic
+<question> Match the nouns to make compounds: taxi
+<variant>rank
+<variant>jam
+<variant>traffic
+<variant>fine
+<variant>station
+<question> Match the nouns to make compounds: road
+<variant>works
+<variant>jam
+<variant>traffic
+<variant>station
+<variant>fine
+<question> Match the nouns to make compounds: petrol
+<variant>station
+<variant>belt
+<variant>jam
+<variant>fine
+<variant>traffic
+<question>Complete the sentences with the correct form of modal verb: We were so hungry we _______ wait for dinner, so we ordered pizza
+<variant>couldn’t
+<variant>cannot
+<variant>can
+<variant>could 
+<variant>be able to
+<question>Complete the sentences with the correct form of modal verb: After three months living here, I ________ understand quite a lot of Russian.
+<variant>can
+<variant>cannot
+<variant>must
+<variant>be able to
+<variant>couldn’t
+<question>Complete the sentences with the correct form of modal verb: I’m free tonight, so I’ll ________ come and help you if you like.
+<variant>could
+<variant>couldn’t
+<variant>can
+<variant>cannot
+<variant>be able to
+<question>Complete the sentences with the correct form of modal verb: What does this label say? I ________ see without my glasses.
+<variant>couldn’t
+<variant>cannot
+<variant>be able to
+<variant>can
+<variant>could
+<question>Complete the sentences with the correct form of modal verb: You ________ drive on the right in Europe (except in the UK).
+<variant>must
+<variant>should
+<variant>don’t have to
+<variant>might
+<variant>mustn’t
+<question>Complete the sentences with the correct form of modal verb: Great! It’s a holiday tomorrow – we ________ go to work.
+<variant>don’t have to
+<variant>mustn’t
+<variant>shouldn’t
+<variant>have to 
+<variant>should
+<question>Complete the sentences with the correct form of modal verb: They _____be out. Nobody is answering the phone.
+<variant>might
+<variant>mustn’t
+<variant>must
+<variant>should
+<variant>can
+<question>Complete the sentences with the correct form of modal verb: ‘Look, Rose left her bag here.’ ‘It ________ be Rose’s– her bag is black.’
+<variant>can’t
+<variant>should
+<variant>mustn’t
+<variant>might
+<variant>can
+<question>Complete the sentences with the correct form of modal verb: I’d love ________ play a musical instrument.
+<variant>to be able to
+<variant>should
+<variant>might
+<variant>can
+<variant>mustn’t
+<question>Complete the sentences with the correct form of modal verb:‘I passed my driving test!’ ‘Congratulations! You ________ be very happy.’
+<variant>must
+<variant>mustn’t
+<variant>should
+<variant>can
+<variant>could
+<question> Complete the phrases with the correct word: I sent you a ________ earlier – did you get it? 
+<variant>text
+<variant>message
+<variant>back
+<variant>number
+<variant>engaged
+<question> Complete the phrases with the correct word: I’m trying to call Claire, but her line’s been ________ for half an hour; she must be talking to her mum.
+<variant>engaged
+<variant>back
+<variant>number
+<variant>tone
+<variant>message
+<question> Complete the phrases with the correct word: The person you are calling is not available at the moment. Please leave a ________ after the beep.
+<variant>message
+<variant>number
+<variant>tone
+<variant>turn
+<variant>back
+<question> Complete the phrases with the correct word: I’ve just bought a new mobile; I must choose a new ring ________. 
+<variant>tone
+<variant>number
+<variant>back
+<variant>engaged
+<variant>turn
+<question> Complete the phrases with the correct word: I have to go to a meeting. Can you call me ________ in half an hour? 
+<variant>back
+<variant>number
+<variant>turn
+<variant>engaged
+<variant>message 
+<question> Complete the phrases with the correct word: You must ________ off your mobile before you go into the cinema. 
+<variant>turn
+<variant>number
+<variant>message 
+<variant>engaged
+<variant>text
+<question> Complete the phrases with the correct word: I’m sorry, I think I dialed the wrong ________
+<variant>number
+<variant>message
+<variant>tone
+<variant>engaged
+<variant>text
+<question> Choose the right adjective to complete the sentence: The match was _____. There weren’t any goals
+<variant>boring
+<variant>embarrassed
+<variant>frightened 
+<variant>bored
+<variant>tiring
+<question> Choose the right adjective to complete the sentence: Studying for five hours a day is really ________
+<variant>tired
+<variant>frightened 
+<variant>embarrassed
+<variant>bored
+<variant>tiring
+<question> Choose the right adjective to complete the sentence: I fell over in the restaurant. I was so ________! 
+<variant>embarrassed
+<variant>frightening
+<variant>tired
+<variant>bored
+<variant>frightened
