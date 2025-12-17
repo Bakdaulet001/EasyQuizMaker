@@ -1,0 +1,609 @@
+<question>Логическое ИЛИ в языке C#?
+<variant>||
+<variant>&&
+<variant>!
+<variant>and
+<variant>or
+<question>Логическое И в языке C#?
+<variant>&&
+<variant>||
+<variant>!
+<variant>and
+<variant>or
+<question>Отрицание в языке C#?
+<variant>!
+<variant>||
+<variant>&&
+<variant>and
+<variant>or
+<question>Правильное определение одномерного массива в языке C# из целых чисел?
+<variant>int[] k
+<variant>int [k]
+<variant>int k[3]
+<variant>int[3] k
+<variant>int k[]
+<question>Как задается двумерный массив из целых чисел в языке C#?
+<variant>int[,] k
+<variant>new int [2,3]
+<variant>int k[,]
+<variant>int k[4,5]
+<variant>int k[][]
+<question>Какой оператор примеряется тогда, когда программа должна разделится более чем
+на два направления?
+<variant>switch
+<variant>if
+<variant>goto
+<variant>case
+<variant>for
+<question>Укажите правильное описание цикла foreach
+<variant>foreach(int i in m)
+<variant>foreach(i=0;i<m;i++)
+<variant>foreach(i=0;i>m;i++)
+<variant>foreach(i=1;i<=m;i++)
+<variant>foreach(i <= m)
+<question>Укажите общедоступный метод класса
+<variant>public
+<variant>private
+<variant>protected
+<variant>internal
+<variant>class
+<question>Укажите метод, который доступен только внутри класса, в котором определен
+<variant>private
+<variant>protected
+<variant>internal
+<variant>public
+<variant>class
+<question>Укажите метод, который доступен из класса и всех его потомках
+<variant>protected
+<variant>internal
+<variant>public
+<variant>private
+<variant>class
+<question>Укажите метод, который доступен из всех классов внутри сборки, в которой он
+определен
+<variant>internal
+<variant>public
+<variant>protected
+<variant>private
+<variant>class
+<question>Какой метод осуществляет поиск элемента массива
+<variant>BinarySearch()
+<variant>Clear()
+<variant>CopyTo()
+<variant>Search()
+<variant>Reverse()
+<question>Какой метод очищает диапазон элементов массива
+<variant>Clear()
+<variant>CopyTo()
+<variant>Search()
+<variant>Reverse()
+<variant>ClearScreen()
+<question>Какой метод расставляет элементы в обратном порядке
+<variant>Clear()
+<variant>CopyTo()
+<variant>Search()
+<variant>Reverse()
+<variant>ClearScreen()
+<question>Какой метод определяет количество элементов в указанном измерении и общее количество элементов
+<variant>GetLength(), Length
+<variant>CopyTo(),Length
+<variant>Search()
+<variant>Reverse()
+<variant>ClearScreen()
+<question>Какой метод возвращает или устанавливает значение указaнного индекса
+<variant>GetValue(), SetValue()
+<variant>CopyTo(),Length
+<variant>Search()
+<variant>Reverse()
+<variant>ClearScreen()
+<question>Какой метод осуществляет копирование элементов из исходного массива в массив
+назначения
+<variant>CopyTo()
+<variant>CopyTo(),Length
+<variant>Search()
+<variant>Reverse()
+<variant>ClearScreen()
+<question>Какой метод объединяет две строки в одну
+<variant>Concat()
+<variant>CompareTo()
+<variant>Copy()
+<variant>Format()
+<variant>Insert()
+<question>Какой метод сравнивает две строки
+<variant>CompareTo()
+<variant>Copy()
+<variant>Format()
+<variant>Insert()
+<variant>Remove()
+<question>Какой метод осуществляет форматирование строки
+<variant>Format()
+<variant>Insert()
+<variant>Remove()
+<variant>CompareTo()
+<variant>Copy()
+<question>Какой метод осуществляет вставку строки внутрь существующей
+<variant>Insert()
+<variant>Remove()
+<variant>CompareTo()
+<variant>Copy()
+<variant>ToUpper()
+<question>Какой метод создает копию строки
+<variant>Copy()
+<variant>ToUpper()
+<variant>Insert()
+<variant>Remove()
+<variant>CompareTo()
+<question>Какой метод осуществляет заполнение строки указанными символами
+<variant>PadLeft(), PadRight()
+<variant>ToUpper(), ToLower()
+<variant>Insert()
+<variant>Remove()
+<variant>CompareTo()
+<question>Какие методы создают копию строки с указанными изменениями
+<variant>Remove(), Replace()
+<variant>ToUpper(), ToLower()
+<variant>Insert(), CompareTo()
+<variant>Remove(), CompareTo()
+<variant>CompareTo(),ToLower()
+<question>Какие методы создают копию строки строчными или прописными буквами
+<variant>ToUpper(), ToLower()
+<variant>Insert(), CompareTo()
+<variant>Remove(), CompareTo()
+<variant>CompareTo(),ToLower()
+<variant>Remove(), Replace()
+<question>Когда вызывается конструктор класса?
+<variant>в момент создания переменной
+<variant>в момент описания переменной
+<variant>в начале программы
+<variant>внутри класса
+<variant>внутри функции
+<question>Что такое конструктор?
+<variant>это функция (метод) класса
+<variant>это переменная класса
+<variant>это строка класса
+<variant>это массив класса
+<variant>это определение класса
+<question>Какие типы лексем различают в языке C#?
+<variant>идентификаторы, ключевые слова, знаки (символы) операций, литералы, разделители
+<variant>идентификаторы, ключевые слова, знаки (символы) операций, литералы
+<variant>ключевые слова, знаки (символы) операций, литералы, разделители
+<variant>идентификаторы, ключевые слова, литералы, разделители
+<variant>операторы, ключевые слова, знаки (символы) операций, литералы, разделители
+<question>В языке C# различают сколько типов лексем?
+<variant>5
+<variant>4
+<variant>3
+<variant>6
+<variant>2
+<question>В С# существует какие типы литералов?
+<variant>целочисленный, вещественный, символьный, строковый
+<variant>вещественный, символьный, строковый
+<variant>целочисленный, символьный, строковый
+<variant>целочисленный, вещественный, строковый
+<variant>целочисленный, вещественный, булевый, строковый
+<question>В С# существует сколько типов литералов?
+<variant>4
+<variant>5
+<variant>3
+<variant>6
+<variant>2
+<question>Какая функции производит округление до большего целого?
+<variant>Math.Ceiling
+<variant>Math.Floor
+<variant>Math.Pow
+<variant>Math.Sign
+<variant>Math.Round
+<question>Какая функции производит округление до меньшего целого?
+<variant>Math.Floor
+<variant>Math.Ceiling
+<variant>Math.Pow
+<variant>Math.Sign
+<variant>Math.Round
+<question>Какая функции производит простое округление
+<variant>Math.Round
+<variant>Math.Floor
+<variant>Math.Ceiling
+<variant>Math.Pow
+<variant>Math.Sign
+<question>Для ввода данных обычно используется какой метод?
+<variant>ReadLine
+<variant>WriteLine
+<variant>Printf
+<variant>Scanf
+<variant>Cin
+<question>Для вывода данных обычно используется какой метод?
+<variant>WriteLine
+<variant>Printf
+<variant>Scanf
+<variant>Cin
+<variant>ReadLine
+<question>Что означает Console.WriteLine("x=" + x+"y=" + y)?
+<variant>на экран выводится строка, образованная последовательным слиянием строки "x=",
+значения x, строки "y=" и значения у
+<variant>на экран выводится строка, образованная последовательным слиянием строк "x=" и
+"y="
+<variant>на экран выводится значения x и у
+<variant>на экран выводится строка
+<variant>на экран выводится строка значение которого равна x+ у
+<question>Что означает Console.WriteLine("x={0} y={1}", x,y )?
+<variant>на экран выводится строка, формат которой задан первым аргументом метода, при
+этом вместо параметра {0} выводится значение x, а вместо {1} – значение y
+<variant>на экран выводится строка х+ y
+<variant>на экран выводится строка
+<variant>на экран выводится выводится значение x и у
+<variant>на экран выводится строка, формат которой задан первым аргументом
+<question>Управляющий символ с помощью которого производится перевод страницы?
+<variant>\f
+<variant>\n
+<variant>\r
+<variant>\b
+<variant>\a
+<question>Управляющий символ с помощью которого производится перевод строки?
+<variant>\n
+<variant>\f
+<variant>\r
+<variant>\b
+<variant>\a
+<question>Управляющий символ с помощью которого производится перевод каретки?
+<variant>\r
+<variant>\n
+<variant>\f
+<variant>\b
+<variant>\a
+<question>Управляющий символ с помощью которого производится возврат на шаг назад?
+<variant>\b
+<variant>\a
+<variant>\r
+<variant>\n
+<variant>\f
+<question>Управляющий символ с помощью которого производится звуковой сигнал?
+<variant>\a
+<variant>\b
+<variant>\r
+<variant>\n
+<variant>\f
+<question>Если передаем в некоторую функцию параметр, то функция по умолчанию работает с копией параметра, а не с оригиналом. Это …
+<variant>передача по значению
+<variant>передача по ссылке
+<variant>передача по переменной
+<variant>передача по функции
+<variant>передача по классу
+<question>Для чего используем ключевое слово ref ?
+<variant>передача по ссылке
+<variant>передача по переменной
+<variant>передача по функции
+<variant>передача по классу
+<variant>передача по значению
+<question>Что представляет фрагмент программы ?
+int s=0; int[] m; foreach(int i in m) {s+=i};
+<variant>суммирует все элементы массива m
+<variant>суммирует индексы массива m
+<variant>суммирует целые числа
+<variant>вычисляет произведение массива m
+<variant>вычисляет сумму m
+<question> Что представляет фрагмент программы ?
+Random rnd=new Random(112); while (rnd.Next(1,6)!=5) {k++;};
+<variant>цикл будет вращаться до тех пор, пока некоторое случайное число не окажется равным 5
+<variant>цикл не будет вращаться до тех пор, пока некоторое случайное число не окажется
+равным 5
+<variant>цикл будет вращаться до тех пор, пока пользователь не введет 5
+<variant> цикл не будет вращаться до тех пор, пока пользователь не введет 5
+<variant>суммирует значение к
+<question>Если задан двумерный массив int[,] k = new int [3,4], то последний элемент определяется как?
+<variant>k[2,3]
+<variant>k[3,4]
+<variant>k[1,4]
+<variant>k[4,3]
+<variant>k[3,1]
+<question>Если x=4; y=5; z=++x*y++; то какие значения примут z,х,у ?
+<variant>x=5; y=6; z=30
+<variant>x=4; y=5; z=20
+<variant>x=4; y=6; z=24
+<variant>x=5; y=6; z=25
+<variant>x=6; y=5; z=30
+<question>Результат выполнения программы?
+using System;
+internal class Test
+{ private static void Main(string[] args)
+{ unchecked
+{ int i = -1; Console.WriteLine((byte) i);
+} } }
+<variant>255
+<variant>-1
+<variant>1
+<variant>-255
+<variant>0
+<question>Результат выполнения программы?
+using System;
+internal class Test
+{ private static void Main(string[] args)
+{ int x = 1984; int y = 2001;
+x ^= y ^= x ^= y;
+Console.WriteLine("x = " + x + "; y = " + y);
+} }
+<variant>х=0; у=1984
+<variant>х+ у
+<variant>х=2001; у=1984
+<variant>х=1974; у=2001
+<variant>х=1984; у=0
+<question>Результат выполнения программы?
+using System;
+internal class Test
+{ private static void Main(string[] args)
+{ char x = 'X';
+int i = 0;
+Console.WriteLine(true ? x : 'a');
+Console.WriteLine(true ? x : 0);
+Console.WriteLine(false ? i : x);
+}}
+<variant>x 88 88
+<variant>a 0 x
+<variant>x 0 a
+<variant>x a 0
+<variant>0 a x
+<question>Результат выполнения программы?
+using System;
+internal class Test
+{ private static void Main(string[] args)
+{ Object x = "Testing ";
+String i = "C#!";
+x = x + i; Console.WriteLine(x);
+} }
+<variant>Testing C#!
+<variant>Testing
+<variant>C#!
+<variant>Testing C#
+<variant>x
+<question>Результат выполнения программы?
+using System;
+internal class Test
+{ private static void Main(string[] args)
+{ Console.WriteLine("H" + "a");
+Console.WriteLine('H' + 'a');
+} }
+<variant>На 169
+<variant>a
+<variant>H
+<variant>Ha
+<variant>H+a
+<question>Результат выполнения программы?
+using System;
+internal class Test
+{ private static void Main(string[] args)
+{ String letters = "ABC";
+char[] numbers = {'1', '2', '3'};
+Console.WriteLine(letters + " easy as " + numbers);
+} }
+<variant>ABC easy as System.Char[]
+<variant>ABC easy as
+<variant>as
+<variant>ABC
+<variant>ABC easy
+<question>Результат выполнения программы?
+using System;
+internal class Test
+{ private static void Main(string[] args)
+{ unchecked
+{ int i = 256;
+byte b = (byte) i; Console.WriteLine((int) b + " ");
+} } }
+<variant>0
+<variant>256
+<variant>-256
+<variant>b+0
+<variant>b
+<question>Результат выполнения программы?
+using System;
+internal class Test
+{ private static void Main(string[] args)
+{ int j = 0;
+for (int i = 0; i < 100; i++) j = j++;
+Console.WriteLine(j);
+} }
+<variant>0
+<variant>100
+<variant>10000
+<variant>10
+<variant>101
+<question>Результат выполнения программы?
+using System;
+internal class Test
+{ private static void Main(string[] args)
+{ unchecked
+{ int i = int.MaxValue;
+i++; Console.WriteLine(i);
+} } }
+<variant>-2147483648
+<variant>0
+<variant>-1
+<variant>32768
+<variant>-32768
+<question>Результат выполнения программы?
+using System;
+internal class Test
+{ private static void Main(string[] args)
+{ int i = int.MinValue;
+unchecked
+{ if (i != 0 && i == -i)
+{ Console.WriteLine("equal");
+else
+{ Console.WriteLine("not equal"); }
+} } }
+<variant>equal
+<variant>not equal
+<variant>not
+<variant>ошибка
+<variant>0 -i
+<question>Результат выполнения программы?
+using System;
+internal class Test
+{ private static void Main(string[] args)
+{ int m = 0;
+for (int ms = 0; ms < 3*3*10; ms++)
+if (ms%3*10 == 0) m++;
+Console.WriteLine(m);
+} }
+<variant>30
+<variant>33
+<variant>10
+<variant>0
+<variant>330
+<question>Результат выполнения программы?
+using System;
+internal class Test
+{ private static void Main(string[] args)
+{ checked
+{ const int START = 2000000000;
+float f = START + 50;
+if (f == START) Console.WriteLine("true");
+else Console.WriteLine("false");
+} } }
+<variant>true
+<variant>false
+<variant>50
+<variant>2000000000
+<variant>2000000050
+<question>Результат выполнения программы?
+using System;
+class Base
+{ public String className = "Base";}
+class Derived : Base
+{ private new String className = "Derived";}
+class Test
+{ static void Main(string[] args)
+{ Console.WriteLine(new Derived().className);}
+}
+<variant>Base
+<variant>Derived
+<variant>new
+<variant>Derived()
+<variant>className
+<question>Результат выполнения программы?
+using System;
+internal class Program
+{ private static void Main(string[] args)
+{ IList<String> s = new List<String>();
+s.Add("foo");
+IEnumerator enumerator = s.GetEnumerator();
+MethodInfo m = enumerator.GetType().GetMethod("MoveNext");
+Console.WriteLine(m.Invoke(enumerator, null));
+} }
+<variant>true
+<variant>foo
+<variant>MoveNext
+<variant>null
+<variant>false
+<question>Результат выполнения программы?
+using System;
+internal class PoisonParen
+{ private static int i = -21474;
+private static void Main(string[] args)
+{ checked
+{ Console.WriteLine(-i);}
+} }
+<variant>21474
+<variant>-21474
+<variant>i
+<variant>true
+<variant>false
+<question>Результат выполнения программы?
+sing System;
+class Program
+{ private static void Main(string[] args)
+{ long x = long.MaxValue;
+double y = (double)long.MaxValue;
+long z = long.MaxValue - 1;
+Console.Write((x == y) + " "); Console.Write((y == z) + " ");
+Console.Write(x == z); Console.ReadKey();
+} }
+<variant>true true false
+<variant>false
+<variant>true
+<variant>-1
+<variant>true false
+<question>Результат выполнения программы?
+using System;
+public class Test
+{ private static void Main(string[] args)
+{ bool b = true;
+Console.Write(true ? false : true == true ? (b = false) : true);
+Console.WriteLine(" "+b); Console.ReadKey();
+} }
+<variant>false true
+<variant>true false
+<variant>true
+<variant>false
+<variant>b
+<question>Результат выполнения программы?
+using System;
+public class Test
+{ private static void Main(string[] args)
+{ int count = 0;
+for (int i = 0; i < 100; i++);
+{ count++; }
+Console.WriteLine(count); Console.ReadKey();
+}}
+<variant>1
+<variant>0
+<variant>100
+<variant>101
+<variant>99
+<question>Результат выполнения программы?
+using System;
+public class Test
+{ private static void Main(string[] args)
+{ bool b1 = false;
+bool b2 = false;
+if (b1 != b2)
+{ Console.WriteLine("True"); }
+else { Console.WriteLine("False"); }
+}}
+<variant>False
+<variant>True
+<variant>b1
+<variant>b2
+<variant>b1==b2
+<question>Результат выполнения программы?
+using System;
+public class Test
+{ private static void Main(string[] args)
+{ unchecked
+{ short s = short.MinValue;
+char c = (char)s;
+Console.WriteLine((int)c);}
+}}
+<variant>32768
+<variant>-32767
+<variant>-32768
+<variant>0
+<variant>1
+<question>Результат выполнения программы?
+using System;
+public class Test
+{ private static void Main(string[] args)
+{ int a = 10;
+int b = 20;
+a += (a = 4);
+b = b + (b = 5);
+Console.WriteLine("{0} {1}", a, b);
+} }
+<variant>14 25
+<variant>10 20
+<variant>20 10
+<variant>10 25
+<variant>14 20
+<question>Результат выполнения программы?
+using System;
+public class Test
+{ private static void Main(string[] args)
+{ bool b1 = false;
+bool b2 = false;
+if (b2 != b1 )
+{ Console.WriteLine("True");}
+else { Console.WriteLine("False");}
+}}
+<variant>False
+<variant>True
+<variant>b1
+<variant>b2
+<variant>ошибка 

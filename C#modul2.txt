@@ -1,0 +1,619 @@
+<question>терезелер мен басқару элементтері
+бар толыққанды қосымшаны жасауға
+мүмкіндік береді
+<variant>Windows Forms
+<variant>WPF қосымша
+<variant>Консольді қосымша
+<variant>Бос жоба
+<variant>Қосымша
+<question>Формада түрлі басқару элементтерін
+орналастыру үшін ... қолданыңыз.
+<variant>элементтер тақтасын
+<variant>вид
+<variant>Label
+<variant>Конструктор
+<variant>Windows
+<question>Формадан бағдарламаға енгізу
+немесе бір жолға сәйкес келетін формада
+ақпаратты көрсету қажет болса, ....элементің
+пайдаланыңыз.
+<variant>TextBox
+<variant>Button
+<variant>CheckBox
+<variant>ComboBox
+<variant>LinkLabel
+<question>Түсіндірмелікжазбалардыформағақо
+юғаболады. Мұндайжазбаларды
+формағасалуүшін ....элементіқолданылады.
+<variant>Label
+<variant>Button
+<variant>CheckBox
+<variant>ComboBox
+<variant>LinkLabel
+<question>Батырманыбасқандағы оқиға
+өңдеуіш әдіс?
+<variant>button_Click
+<variant>label_Click
+<variant>text_Click
+<variant>object_Click
+<variant>Button
+<question>DoubleClick
+<variant>Тінтуір басқару аумағында екі рет
+басылған кезде пайда болады.
+<variant>Басқару аймағында тінтуір түймешігі
+басылған кезде пайда болады. <variant>Бұл
+KeyDown үшін қосарланған оқиға және бұрын
+басылған кілт босатылғанда орын алады.
+<variant>Форма бұл оқиғаны активация кезінде
+алады.
+<variant>Пернетақтадағы түймешікті басқанда
+пайда болады.
+<question>Click
+<variant>Басқару аймағында тінтуір түймешігі
+басылған кезде пайда болады. <variant>Бұл
+KeyDown үшін қосарланған оқиға және бұрын
+басылған кілт босатылғанда орын алады.
+<variant>Форма бұл оқиғаны активация кезінде
+алады.
+<variant>Пернетақтадағы түймешікті басқанда
+пайда болады.
+<variant>Тінтуір басқару аумағында екі рет
+басылған кезде пайда болады.
+<question>KeyUp
+<variant>Бұл KeyDown үшін қосарланған оқиға
+және бұрын басылған кілт босатылғанда орын
+алады.
+<variant>Тінтуір басқару аумағында екі рет
+басылған кезде пайда болады.
+<variant>Басқару аймағында тінтуір түймешігі
+басылған кезде пайда болады.
+<variant>Формабұлоқиғаныактивациякезіндеал
+ады.
+<variant>Пернетақтадағытүймешіктібасқандапа
+йдаболады.
+<question>KeyPress
+<variant>Пернетақтадағы түймешікті басқанда
+пайда болады.
+<variant>Бұл KeyDown
+үшінқосарланғаноқиғажәнебұрынбасылғанкілт
+босатылғандаорыналады.
+<variant>Тінтуір басқару аумағында екі рет
+басылған кезде пайда болады.
+<variant>Басқару аймағында тінтуір түймешігі
+басылған кезде пайда болады.
+<variant>Формабұлоқиғаныактивациякезіндеал
+ады.
+<question>Формаға түсі орнату үшін
+қолданылатын код
+<variant>BackColor = Color.Green;
+<variant>BackColor = Color.Green
+<variant>BackColor = Color;
+<variant>BackColor = Green;
+<variant>Color.Green;
+<question>…. сипатын True етіп орнатқаннан
+кейін, басқаруды көлденеңінен ғана емес,
+тігінен де созуға болады.
+<variant>Multiline
+<variant>Environment
+<variant>NewLine
+<variant>Mutex
+<variant>TextLine
+<question>if операторының формасы?
+<variant>if (B) S1; else S2;
+<variant>if S1; else S2;
+<variant>if (B) S1; else;
+<variant>else S2; if (B) S1;
+<variant>if (B) S1 else S2;
+<question>Switch операторында ешқандай
+оқиға case мәніне сәйкес болмаса, басқару
+элементі қандай кілттік сөзге жіберіледі?
+<variant>default
+<variant>goto
+<variant>break
+<variant>switch
+<variant>return
+<question>C# тілінде цикл операторлары
+нешеу?
+<variant>4
+<variant>6
+<variant>2
+<variant>3
+<variant>5
+<question>Белгілі бір нысандардың жалпы
+үлгісін анықтайтын бағдарлама бірлігі.
+<variant>Класс
+<variant>Әдіс
+<variant>Оператор
+<variant>Объект
+<variant>Экземпляр
+<question>Класс экземпляры ол -
+<variant>Объект
+<variant>Класс
+<variant>Әдіс
+<variant>Экземпляр
+<variant>Оператор
+<question> Объектіні тінтуірмен басқанда,
+қандай оқиға орын алады. <variant>MouseClick
+<variant>ButtonClick
+<variant>Click
+<variant>KeyClick
+<variant>Mouse
+<question>Көрсетілген мәтінді бастапқы
+жолдың қалаған жеріне кірістіреді.
+<variant>Insert
+<variant>Remove
+<variant>Replace
+<variant>Delete
+<variant>Return
+<question>Жолдыңбірбөлігінжояды
+<variant>Remove
+<variant>Insert
+<variant>Replace
+<variant>Delete
+<variant>Return
+<question>Қатарда
+көрсетілгенмәтіндібасқасынаауыстырады
+<variant>Replace
+<variant>Insert
+<variant>Replace
+<variant>Return
+<variant>Delete
+<question>Компиляторәржолыжаңажолобъекті
+сіненбастамау үшін, C #
+тіліндебасқажолклассы:
+<variant>StringBuilder
+<variant>String
+<variant>Builder
+<variant>IntegerBuilder
+<variant>Object
+<question>Ортақ атаумен біріктірілген бірдей
+типтегі элементтер жиынтығы.
+<variant>Массив
+<variant>Цикл
+<variant>Тип
+<variant>Айнымалы
+<variant>Әдіс
+<question>Екі өлшемді массивтермен жұмыс
+істеу кезінде экрандағы ақпаратты енгізу және
+шығару кестелер түрінде ыңғайлы түрде
+ұйымдастыру әдісі
+<variant>DataGridView
+<variant>DataBind
+<variant>DataBindXY
+<variant>DataGrid
+<variant>GridView
+<question> Графиктерді көрсету бойынша
+барлық жұмыстарды орындайды: осьтерді
+құрастырады және шығарады, координат
+торын шығарады, осьтердің атын және
+графиктің өзін белгілейді, берілген кестені
+түрлі графиктер немесе диаграммалар түрінде
+көрсетеді.
+<variant>Chart
+<variant>Points
+<variant>Series
+<variant>Spline
+<variant>Line
+<question>Жолдар мен пішін салу, мәтінді
+көрсету, суреттерді көрсету үшін арналған
+объект
+<variant>Graphics
+<variant>Paint
+<variant>Spline
+<variant>Chart
+<variant>Series
+<question>Әдісті
+бірретшақыруарқылыбірденқосылғанбірнешет
+үзусызықтардысызуғаболады.
+<variant> DrawLines
+<variant> Graphics
+<variant>DrawLine
+<variant>PaintEvent
+<variant>PaintLines
+<question>Name
+<variant>Басқарманың атын алады немесе
+орнатады. Бұл сипаттың мәні бағдарламада өз
+атыменобъектіге сілтеме жасау үшін
+пайдаланылады.
+<variant>Басқару элементінің өлшемін алады
+немесе орнатады. Бұл сипат Биіктік және ен
+сипаттарын бөлек орнына емес, биіктікті және
+енді бір уақытта орнатуға мүмкіндік береді.
+<variant>Басқару элементінің биіктігін
+тағайындайды немесе орнатады.
+<variant> Басқару элементінің енін алады
+немесе орнатады.
+<variant>Басқару элементінің жоғарғы сол жақ
+бұрышының контейнердің жоғарғы сол жақ
+бұрышына қатысты координаттарын алады
+немесе орнатады.
+<question>Size
+<variant>Басқару элементінің өлшемін алады
+немесе орнатады. Бұл сипат Биіктік және ен
+сипаттарын бөлек орнына емес, биіктікті және
+енді бір уақытта орнатуға мүмкіндік береді.
+<variant>Басқарманың атын алады немесе
+орнатады. Бұл сипаттың мәні бағдарламада өз
+атыменобъектіге сілтеме жасау үшін
+пайдаланылады.
+<variant>Басқару элементінің биіктігін
+тағайындайды немесе орнатады.
+<variant> Басқару элементінің енін алады
+немесе орнатады.
+<variant>Басқару элементінің жоғарғы сол жақ
+бұрышының контейнердің жоғарғы сол жақ
+бұрышына қатысты координаттарын алады
+немесе орнатады.
+<question>Height
+<variant>Басқару элементінің биіктігін
+тағайындайды немесе орнатады.
+<variant>Басқарманың атын алады немесе
+орнатады. Бұл сипаттың мәні бағдарламада өз
+атымен объектіге сілтеме жасау үшін
+пайдаланылады.
+<variant>Басқару элементінің өлшемін алады
+немесе орнатады. Бұл сипат Биіктік және ен
+сипаттарын бөлек орнына емес, биіктікті және
+енді бір уақытта орнатуға мүмкіндік береді.
+<variant> Басқару элементінің енін алады
+немесе орнатады.
+<variant>Басқару элементінің жоғарғы сол жақ
+бұрышының контейнердің жоғарғы сол жақ
+бұрышына қатысты координаттарын алады
+немесе орнатады.
+<question>Width
+<variant>Басқаруэлементініңеніналадынемесео
+рнатады.
+<variant>Басқарманың атын алады немесе
+орнатады. Бұл сипаттың мәні бағдарламада өз
+атыменобъектіге сілтеме жасау үшін
+пайдаланылады.
+<variant>Басқару элементінің өлшемін алады
+немесе орнатады. Бұл сипат Биіктік және ен
+сипаттарын бөлек орнына емес, биіктікті және
+енді бір уақытта орнатуға мүмкіндік береді.
+<variant>Басқару элементінің биіктігін
+тағайындайды немесе орнатады.
+<variant>Басқару элементінің жоғарғы сол жақ
+бұрышының контейнердің жоғарғы сол жақ
+бұрышына қатысты координаттарын алады
+немесе орнатады.
+<question>Location
+<variant>Басқару элементінің жоғарғы сол жақ
+бұрышының контейнердің жоғарғы сол жақ
+бұрышына қатысты координаттарын алады
+немесе орнатады.
+<variant> Басқару элементінің енін алады
+немесе орнатады.
+<variant>Басқарманың атын алады немесе
+орнатады. Бұл сипаттың мәні бағдарламада өз
+атыменобъектіге сілтеме жасау үшін
+пайдаланылады.
+<variant>Басқару элементінің өлшемін алады
+немесе орнатады. Бұл сипат Биіктік және ен
+сипаттарын бөлек орнына емес, биіктікті және
+енді бір уақытта орнатуға мүмкіндік береді.
+<variant>Басқару элементінің биіктігін
+тағайындайды немесе орнатады.
+<question>Compare() әдісі
+<variant> Екі жолды салыстырады және
+сұрыптау ретіндегі олардың салыстырмалы
+орнын көрсететін бүтін сан қайтарады.
+<variant> Екі немесе одан көп жолды бір жолға
+біріктіреді.
+<variant> Бұл әдіс жолды басқа жолға немесе
+Char түріндегі массивке көшіру үшін
+пайдаланылады.
+<variant>Жолдағы таңбалар санын қайтаратын
+әдіс.
+<variant> Жолдағы таңбаларды төменгі
+регистрге түрлендіреді.
+<question>Concat() әдісі
+<variant> Екі немесе одан көп жолды бір жолға
+біріктіреді.
+<variant> Екі жолды салыстырады және
+сұрыптау ретіндегі олардың салыстырмалы
+орнын көрсететін бүтін сан қайтарады.
+<variant> Бұл әдіс жолды басқа жолға немесе
+Char түріндегі массивке көшіру үшін
+пайдаланылады.
+<variant>Жолдағы таңбалар санын қайтаратын
+әдіс.
+<variant> Жолдағы таңбаларды төменгі
+регистрге түрлендіреді.
+<question>Copy() әдісі
+<variant> Бұл әдіс жолды басқа жолға немесе
+Char түріндегі массивке көшіру үшін
+пайдаланылады.
+<variant> Екі жолды салыстырады және
+сұрыптау ретіндегі олардың салыстырмалы
+орнын көрсететін бүтін сан қайтарады.
+<variant> Екі немесе одан көп жолды бір жолға
+біріктіреді.
+<variant>Жолдағы таңбалар санын қайтаратын
+әдіс.
+<variant> Жолдағы таңбаларды төменгі
+регистрге түрлендіреді.
+<question>Length() әдісі
+<variant>Жолдағы таңбалар санын қайтаратын
+әдіс
+<variant>Екі жолды салыстырады және
+сұрыптау ретіндегі олардың салыстырмалы
+орнын көрсететін бүтін сан қайтарады.
+<variant> Екі немесе одан көп жолды бір жолға
+біріктіреді.
+<variant> Бұл әдіс жолды басқа жолға немесе
+Char түріндегі массивке көшіру үшін
+пайдаланылады.
+<variant> Жолдағы таңбаларды төменгі
+регистрге түрлендіреді.
+<question>ToLower() әдісі
+<variant> Жолдағы таңбаларды төменгі
+регистрге түрлендіреді.
+<variant> Екі жолды салыстырады және
+сұрыптау ретіндегі олардың салыстырмалы
+орнын көрсететін бүтін сан қайтарады.
+<variant> Екі немесе одан көп жолды бір жолға
+біріктіреді.
+<variant> Бұл әдіс жолды басқа жолға немесе
+Char түріндегі массивке көшіру үшін
+пайдаланылады.
+<variant>Жолдағы таңбалар санын қайтаратын
+әдіс.
+<question>Массивтің элементтерінің тәртібін
+керісінше өзгертеді.
+<variant>Reverse()
+<variant>Length()
+<variant>Copy()
+<variant>Compare()
+<variant>Location()
+<question>Мәтін сипатының мәні өзгергенде
+орын алады. Бұл оқиға мәтін сипаты
+бағдарлама немесе пайдаланушы әрекеттерінің
+нәтижесі ретінде өзгертілген кезде пайда
+болады.
+<variant>TextChanged
+<variant>Paint
+<variant>Leave
+<variant>Enter
+<variant>Move
+<question>Басқаруэлементіқайтасалынғанкезде
+пайдаболады
+<variant>Paint
+<variant>Leave
+<variant>Enter
+<variant>Move
+<variant>TextChanged
+<question> Енгізу фокусы басқарудан шыққан
+кезде пайда болады.
+<variant>Leave
+<variant>Paint
+<variant>Enter
+<variant>Move
+<variant>TextChanged
+<question>Басқаруенгізілгенненкейін,фокуспер
+нетақтаарқылыөзгертілгендепайдаболады
+<variant>Enter
+<variant>Leave
+<variant>Paint
+<variant>Move
+<variant>TextChanged
+<question> Басқару жылжытылған кезде пайда
+болады.
+<variant>Move
+<variant>Enter
+<variant>Leave
+<variant>Paint
+<variant>TextChanged
+<question>Бағдарламаның келесі үзіндісі нені
+шығарады/ Результат программы?
+int k=5;
+int i;
+for (i = k; i <= 0; i --) k = k+1;
+Console.WriteLine("i = {0} k = {1} ", i, k);
+<variant>i=5 k=5
+<variant>i=3, k=5
+<variant>i=5, k=5
+<variant>i=5, k=4
+<variant>i=4 k=4
+<question>for циклі аяқталғаннан кейін I
+басқарушы айнымалының мәні қандай болады/
+Чему равно значениепеременной I после
+окончания цикла for?
+int I;
+int k = 5;
+for (I = 0; I <= k; I++) k = k - 1;
+Console.WriteLine("I = {0} ", I);
+<variant>I=3
+<variant>3
+<variant>5
+<variant>I=5
+<variant>I=2
+<question>Бағдарламаның келесі үзіндісі нені
+шығарады/ Результатвыполненияпрограммы?
+k = 5; I = 0;
+while (I < k)
+{
+I = I + 2;
+k++;
+}
+Console.WriteLine(I);
+<variant>10
+<variant>5
+<variant>6
+<variant>8
+<variant>0
+<question>Бағдарламаның келесі үзіндісі
+экранға нені шығарады/
+Результатвыполненияпрограммы?
+int I = 0, k=0;
+while (I != 10)
+for (I = 1; I <= 9; I++) k++;
+Console.WriteLine("I = {0}", I);
+<variant> I = 10
+<variant> I = 9
+<variant> I = 8
+<variant> I = 0
+<variant> I = 12
+<question>Келесі бағдарлама үзіндісі экранға
+нені шығарады/
+Результатвыполненияпрограммы?
+public static void ttt(int a, int b, int x, int y)
+{ x = a; a = b; y = a; }
+static void Main(string[] args)
+{
+ int a, b, c = 0, d = 0;
+ a = 5;
+ b = 8;
+ttt(a, b, c, d);
+Console.WriteLine(" {0} {1} ", c,d);
+}
+<variant>8 5
+<variant>5 8
+<variant>13 5
+<variant>5 13
+<variant>8 8
+<question>Бағдарламаның келесі үзіндісі нені
+шығарады/ Результатвыполненияпрограммы?
+strimg clovo = "abcdefg";
+Console.WriteLine(" {0}", clovo.Length);
+<variant>7
+<variant>abcdefg
+<variant>"abcdefg"
+<variant>6
+<variant>0
+<question>Қосымшаның жаңа доменін
+жасайтын ститикалықәдіс/Статический метод
+для создания нового домена приложения
+<variant>CreateDomain()
+<variant>GetAssemblies()
+<variant>ThreadPool
+<variant>WaitHandle
+<variant>BaseDirectory
+<question>Ағымдағы ағынның
+идентификациясын қайтаратын статикалық
+әдіс
+/Статическийметодвозвращаетидентификациют
+екущегопотока
+<variant>GetCurrentThreaId()
+<variant>BaseDirectory
+<variant>Directory
+<variant>ThreadPool
+<variant>WaitHandle
+<question>Көрсетілген доменді шығарып
+тастайтын статикалықәдіс
+/Статическийметодвыгрузкиуказанногодомена
+<variant>Unload()
+<variant>GetAssemblies()
+<variant>BaseDirectory
+<variant>ThreadPool
+<variant>WaitHandle
+<question>Құраманың базалық каталогын
+қайтаратын қасиет /Свойство,
+возвращаетбазовыйкаталогсборки
+<variant>BaseDirectory
+<variant>ThreadPool
+<variant>WaitHandle
+<variant>GetAssemblies()
+<variant>Interlocked
+<question>Құрамада анықталған типтің
+нұсқасын жасайды
+/Создаетэкземпляруказанноготипа,
+определенноговсборке
+<variant>CreateInstance()
+<variant>Interlocked
+<variant>GetAssemblies()
+<variant>ThreadPool
+<variant>WaitHandle
+<question>Аты параметр ретінде көрсетілген
+құраманы іске қосады
+/Запускаетнавыполнениесборку,
+имякоторойуказановкачествепараметра
+<variant>ExecuteAssembly()
+<variant>GetAssemblies()
+<variant>Interlocked
+<variant>ThreadPool
+<variant>WaitHandle
+<question>Ағымдағыбағдарламадоменінежүкте
+лгенжинақтартізімінқайтарады
+/Возвращаетсписоксборок,
+загруженныхвтекущийдоменприложения
+<variant>GetAssemblies()
+<variant>Monitor
+<variant>Mutex
+<variant>ThreadPool
+<variant>WaitHandle
+<question>Қосымшадоменіненқұраманыжүктей
+ді /Загружаетсборкусдоменприложения
+<variant>Load()
+<variant>GetAssemblies()
+<variant>Mutex
+<variant>ThreadPool
+<variant>WaitHandle
+<question>System.Threading атаулары
+кеңістігіндегі деректерге жалпы қатынауды
+синхрондау
+/Синхронизацияобщегодоступакданнымвпрост
+ранствеимен System.Threading
+<variant>Interlocked
+<variant>Monitor
+<variant>Mutex
+<variant>ThreadPool
+<variant>WaitHandle
+<question>System.Threadingатау кеңістігіндегі
+ағын нысандарын синхрондау
+/Синхронизацияпотоковыхобъектоввпространс
+твеимен System.Threading
+<variant>Monitor
+<variant>Mutex
+<variant>ThreadPool
+<variant>WaitHandle
+<variant>Interlocked
+<question>System.Threadingатау кеңістігінде
+синхрондау примитиві
+/Примитивсинхронизациивпространствеимен
+System.Threading
+<variant>Mutex
+<variant>ThreadPool
+<variant>WaitHandle
+<variant>Interlocked
+<variant>Monitor
+<question>System.Threadingатау кеңістігіндегі
+өзара байланысты ағындар жиынтығын
+басқару
+/Управлениенаборомвзаимосвязанныхпотоковв
+пространствеимен System.Threading
+<variant>ThreadPool
+<variant>WaitHandle
+<variant>Interlocked
+<variant>Monitor
+<variant>Mutex
+<question>
+System.Threadingатаукеңістігіндебарлықсинхро
+ндаунысандарынұсынады
+/Представляетвсеобъектысинхронизациивпрост
+ранствеимен System.Threading
+<variant>WaitHandle
+<variant>Interlocked
+<variant>Monitor
+<variant>Mutex
+<variant>ThreadPool
+<question>Ағыныніскеқосаралдындашақырылу
+ытиісәдісінесілтемебарДелегат/Делегатсоссылк
+ойнаметод,
+которыйдолженбытьвызванпередзапускомпото
+ка
+<variant>ThreadStart
+<variant>WaitCallback
+<variant>Mutex
+<variant>ThreadPool
+<variant>WaitHandle
+<question>System.Threading атау кеңістігіндегі
+ThreadPool жұмыс элементтері үшін Делегат
+/Делегатдлярабочихэлементов ThreadPool
+впространствеимен System.Threading
+<variant>WaitCallback
+<variant>Mutex
+<variant>ThreadPool
+<variant>WaitHandle
+<variant>ThreadStart
