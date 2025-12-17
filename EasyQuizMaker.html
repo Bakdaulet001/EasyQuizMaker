@@ -526,6 +526,132 @@
         ::-webkit-scrollbar-thumb:hover {
             background: rgba(255, 255, 255, 0.3);
         }
+
+        /* ===== MODAL DIALOG ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background: rgba(15, 23, 42, 0.95);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-header {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .modal-field {
+            margin-bottom: 20px;
+        }
+
+        .modal-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .modal input[type="text"],
+        .modal select {
+            width: 100%;
+            padding: 10px;
+            background: rgba(30, 41, 59, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        .modal input[type="text"]:focus,
+        .modal select:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .modal input[type="checkbox"] {
+            margin-right: 8px;
+            cursor: pointer;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .modal-buttons button {
+            flex: 1;
+        }
+
+        /* ===== SAVED TESTS LIST ===== */
+        .saved-tests-container {
+            margin-bottom: 30px;
+        }
+
+        .saved-tests-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .saved-test-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .saved-test-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .saved-test-name {
+            font-weight: 600;
+            color: #10b981;
+            font-size: 14px;
+        }
+
+        .saved-test-info {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 4px;
+        }
     </style>
 </head>
 <body>
@@ -536,18 +662,74 @@
         <div class="input-container">
             <h1>📚 EasyQuizMaker</h1>
             <p>XML форматындағы сұрақтарды төменге түрік етіңіз</p>
-            <div id="autoLoadStatus" style="margin-bottom:8px; color:rgba(255,255,255,0.8); font-size:13px;">Попытка автоматически загрузить файл теста из `акпараттык жуйелер.txt`...</div>
             <textarea id="questionsInput" placeholder="&lt;question&gt;...&lt;/question&gt;&#10;&lt;question2&gt;...&lt;/question2&gt;&#10;&lt;question3&gt;...&lt;/question3&gt;"></textarea>
-            <div id="fileFallback" style="margin-top:8px; display:none;">
-                <div style="font-size:13px; color:rgba(255,255,255,0.8); margin-bottom:6px;">Если автоматическая загрузка не сработала — выберите файл:</div>
-                <div class="file-upload">
-                    <label class="file-btn" for="fileInput">Выбрать .txt</label>
-                    <span class="file-name" id="fileName">Файл не выбран</span>
-                    <input type="file" id="fileInput" accept=".txt" />
-                </div>
+            
+            <!-- Сохраненные тесты -->
+            <div class="saved-tests-container" id="savedTestsContainer" style="display:none;">
+                <div class="saved-tests-title">📋 Сохраненные тесты:</div>
+                <div id="savedTestsList"></div>
             </div>
+
+            <!-- СИСТЕМНЫЕ ТЕСТЫ -->
+            <div class="saved-tests-container" id="systemTestsContainer" style="margin-top:12px; display:none;">
+                <div class="saved-tests-title">🖥️ Системные тесты:</div>
+                <div id="systemTestsList"></div>
+            </div>
+
             <div class="button-group">
-                <button class="btn-primary" onclick="startQuiz()">Тестті басау</button>
+                <button class="btn-primary" onclick="openSettingsModal()">Тестті басау</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SETTINGS MODAL -->
+    <div class="modal" id="settingsModal">
+        <div class="modal-content">
+            <div class="modal-header">⚙️ Тест Параметрлері</div>
+
+            <div class="modal-field">
+                <label class="modal-label">Тест атауы:</label>
+                <input type="text" id="testName" placeholder="Мысалы: Биология 10-сынып">
+            </div>
+
+            <div class="modal-field">
+                <label class="modal-label">Сұрақтар саны:</label>
+                <select id="questionCount">
+                    <option value="all">Барлығы</option>
+                    <option value="20">Макс 20 рандомны сұрақ</option>
+                    <option value="50">Макс 50 рандомны сұрақ</option>
+                </select>
+            </div>
+
+            <div class="modal-field">
+                <label class="checkbox-group">
+                    <input type="checkbox" id="autoAnswers"> Автоматты жауап режимі
+                </label>
+                <div style="font-size:12px; color:rgba(255,255,255,0.6); margin-left:26px;">Дұрыс жауаптарды түсіндіру</div>
+            </div>
+
+            <div class="modal-field">
+                <button class="btn-secondary" onclick="openAnswerSelectionModal()" style="width:100%;">✓ Дұрыс жауаптарды таңдау</button>
+                <div style="font-size:12px; color:rgba(255,255,255,0.6); margin-top:8px; margin-left:0;" id="answerSelectionStatus">Қажетті емес - автоматты сақтау</div>
+            </div>
+
+            <div class="modal-buttons">
+                <button class="btn-secondary" onclick="closeSettingsModal()">Бас тарту</button>
+                <button class="btn-primary" onclick="startQuizWithSettings()">Басту</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ANSWER SELECTION MODAL -->
+    <div class="modal" id="answerSelectionModal">
+        <div class="modal-content">
+            <div class="modal-header">✓ Дұрыс жауаптарды таңдау</div>
+            <div id="answerSelectionContent" style="max-height:500px; overflow-y:auto;">
+                <!-- Заполнится динамически -->
+            </div>
+            <div class="modal-buttons" style="margin-top:20px;">
+                <button class="btn-secondary" onclick="closeAnswerSelectionModal()">Бас тарту</button>
+                <button class="btn-primary" onclick="saveSelectedAnswers()">Сохранить</button>
             </div>
         </div>
     </div>
@@ -598,6 +780,7 @@
 
         <div class="results-footer">
             <button class="btn-primary" onclick="restartQuiz()">Қайта бастау</button>
+            <button id="retryWrongBtn" class="btn-secondary" onclick="retryWrongAnswers()" style="display:none; margin-top:10px; width:100%;">Қате сұрақтарды қайта өту</button>
         </div>
     </div>
 </div>
@@ -608,7 +791,18 @@
     let currentQuestionIndex = 0;
     let userAnswers = [];
     let answeredQuestions = 0;
-    let questionAnswerStates = []; // Track whether answer was submitted
+    let questionAnswerStates = [];
+    
+    // Settings
+    let testSettings = {
+        testName: '',
+        questionCount: 'all',
+        autoAnswers: false,
+        selectedAnswerOverrides: {}
+    };
+    let allParsedQuestions = [];
+    let wrongQuestionIndices = [];
+    let isRetryingWrongAnswers = false; // Track whether answer was submitted
 
     // PARSE XML FORMAT QUESTIONS
     function parseQuestions(text) {
@@ -702,47 +896,65 @@
     }
 
     // TRY AUTO-LOAD TXT FILE FROM SAME DIRECTORY
-    function attemptAutoLoadFile() {
-        const status = document.getElementById('autoLoadStatus');
-        const fallback = document.getElementById('fileFallback');
+    // Функция удалена - автозагрузка отключена
 
-        // Try fetching the file by relative name. This works when files are served
-        // from a local server or in some local-file scenarios. If it fails, show
-        // file input fallback so user can select file manually.
-        fetch('акпараттык жуйелер.txt')
-            .then(response => {
-                if (!response.ok) throw new Error('not found');
-                return response.text();
-            })
-            .then(text => {
-                document.getElementById('questionsInput').value = text;
-                status.textContent = 'Файл успешно загружен автоматически.';
-                // Start quiz automatically after small delay so UI updates
-                setTimeout(() => startQuiz(), 400);
-            })
-            .catch(err => {
-                status.textContent = 'Автозагрузка не удалась — выберите файл вручную.';
-                if (fallback) fallback.style.display = 'block';
-            });
+    // ENSURE MINIMUM VARIANTS (дополнение вариантов до 5 из других вопросов)
+    function ensureMinimumVariants(questions) {
+        const minVariants = 5;
+        const updatedQuestions = questions.map(q => ({
+            ...q,
+            variants: [...q.variants]
+        }));
 
-        // Wire up manual file input
-        const fileInput = document.getElementById('fileInput');
-        const fileNameSpan = document.getElementById('fileName');
-        if (fileInput) {
-            fileInput.addEventListener('change', (e) => {
-                const file = e.target.files && e.target.files[0];
-                if (!file) return;
-                const reader = new FileReader();
-                reader.onload = function(ev) {
-                    const text = ev.target.result;
-                    document.getElementById('questionsInput').value = text;
-                    document.getElementById('autoLoadStatus').textContent = 'Файл загружен вручную.';
-                    if (fileNameSpan) fileNameSpan.textContent = file.name;
-                    startQuiz();
-                };
-                reader.readAsText(file, 'utf-8');
-            });
-        }
+        // Для каждого вопроса с недостаточным количеством вариантов
+        updatedQuestions.forEach((question, currentQIdx) => {
+            if (question.variants.length < minVariants) {
+                const neededCount = minVariants - question.variants.length;
+                
+                // Получаем текст существующих вариантов для текущего вопроса
+                const existingTexts = new Set(question.variants.map(v => v.text.toLowerCase().trim()));
+                
+                // Собираем все варианты из ДРУГИХ вопросов (исключаем текущий)
+                const otherVariants = [];
+                updatedQuestions.forEach((otherQ, qIdx) => {
+                    if (qIdx !== currentQIdx) { // Исключаем текущий вопрос
+                        otherQ.variants.forEach(variant => {
+                            const variantTextLower = variant.text.toLowerCase().trim();
+                            // Проверяем, что этот вариант еще не добавлен в текущий вопрос
+                            if (!existingTexts.has(variantTextLower)) {
+                                otherVariants.push({
+                                    text: variant.text,
+                                    isCorrect: false
+                                });
+                            }
+                        });
+                    }
+                });
+
+                // Случайно выбираем нужное количество вариантов (без дублирования)
+                if (otherVariants.length > 0) {
+                    const selectedVariants = [];
+                    const shuffledOther = shuffle(otherVariants);
+                    const selectedTexts = new Set(existingTexts);
+                    
+                    for (let i = 0; i < shuffledOther.length && selectedVariants.length < neededCount; i++) {
+                        const variantTextLower = shuffledOther[i].text.toLowerCase().trim();
+                        // Дополнительная проверка на дублирование при выборе
+                        if (!selectedTexts.has(variantTextLower)) {
+                            selectedVariants.push({
+                                text: shuffledOther[i].text,
+                                isCorrect: false
+                            });
+                            selectedTexts.add(variantTextLower);
+                        }
+                    }
+                    
+                    question.variants = question.variants.concat(selectedVariants);
+                }
+            }
+        });
+
+        return updatedQuestions;
     }
 
     // SHUFFLE FUNCTION
@@ -755,35 +967,373 @@
         return arr;
     }
 
-    // START QUIZ
-    function startQuiz() {
+    // MODAL FUNCTIONS
+    function openSettingsModal() {
         const input = document.getElementById('questionsInput').value.trim();
-
         if (!input) {
             alert('Сұрақтарды енгізіңіз!');
             return;
         }
 
-        questions = parseQuestions(input);
-
-        if (questions.length === 0) {
-            alert('Сұрақтарды табу мүмкін болмады. XML форматын тексеріңіз!');
+        allParsedQuestions = parseQuestions(input);
+        if (allParsedQuestions.length === 0) {
+            alert('Сұрақтарды табу мүмкін болмады!');
             return;
         }
 
-        // Shuffle questions
-        questions = shuffle(questions);
+        // Если есть сохраненные настройки для этого набора вопросов, пропустить ввод
+        const qHash = hashQuestions(allParsedQuestions);
+        const savedSettings = getSavedSettings(qHash);
+        
+        if (savedSettings) {
+            testSettings = savedSettings;
+            testSettings.selectedAnswerOverrides = savedSettings.selectedAnswerOverrides || {};
+            startQuizWithSettings();
+            return;
+        }
 
-        // Shuffle variants within each question
-        questions.forEach(q => {
-            q.variants = shuffle(q.variants);
+        // Иначе показать диалог настроек
+        document.getElementById('settingsModal').classList.add('show');
+        document.getElementById('testName').value = '';
+        document.getElementById('questionCount').value = 'all';
+        document.getElementById('autoAnswers').checked = false;
+    }
+
+    function hashQuestions(questions) {
+        // Простой хэш для идентификации набора вопросов
+        const str = questions.map(q => q.question).join('|');
+        let hash = 0;
+        for (let i = 0; i < str.length; i++) {
+            const char = str.charCodeAt(i);
+            hash = ((hash << 5) - hash) + char;
+            hash = hash & hash;
+        }
+        return hash.toString();
+    }
+
+    function getSavedSettings(qHash) {
+        const saved = JSON.parse(localStorage.getItem('quizMakerSettings')) || {};
+        return saved[qHash];
+    }
+
+    function saveSettingsForHash(qHash) {
+        const saved = JSON.parse(localStorage.getItem('quizMakerSettings')) || {};
+        // Сохраняем также вопросы
+        testSettings.questions = allParsedQuestions;
+        saved[qHash] = testSettings;
+        localStorage.setItem('quizMakerSettings', JSON.stringify(saved));
+    }
+
+    function closeSettingsModal() {
+        document.getElementById('settingsModal').classList.remove('show');
+    }
+
+    function openAnswerSelectionModal() {
+        const content = document.getElementById('answerSelectionContent');
+        content.innerHTML = '';
+
+        allParsedQuestions.forEach((q, idx) => {
+            const qDiv = document.createElement('div');
+            qDiv.style.marginBottom = '20px';
+            qDiv.style.paddingBottom = '15px';
+            qDiv.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+
+            const qTitle = document.createElement('div');
+            qTitle.style.fontWeight = '600';
+            qTitle.style.marginBottom = '10px';
+            qTitle.style.color = '#fbbf24';
+            qTitle.textContent = `${idx + 1}. ${q.question}`;
+            qDiv.appendChild(qTitle);
+
+            q.variants.forEach((v, vIdx) => {
+                const label = document.createElement('label');
+                label.style.display = 'flex';
+                label.style.alignItems = 'center';
+                label.style.marginBottom = '8px';
+                label.style.cursor = 'pointer';
+
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.value = vIdx;
+                checkbox.dataset.questionId = idx;
+                checkbox.style.marginRight = '10px';
+
+                if (testSettings.selectedAnswerOverrides[idx] && testSettings.selectedAnswerOverrides[idx].includes(vIdx)) {
+                    checkbox.checked = true;
+                }
+
+                const text = document.createElement('span');
+                text.textContent = v.text;
+                text.style.color = 'rgba(255,255,255,0.9)';
+
+                label.appendChild(checkbox);
+                label.appendChild(text);
+                qDiv.appendChild(label);
+            });
+
+            content.appendChild(qDiv);
         });
+
+        document.getElementById('answerSelectionModal').classList.add('show');
+    }
+
+    function closeAnswerSelectionModal() {
+        document.getElementById('answerSelectionModal').classList.remove('show');
+    }
+
+    function saveSelectedAnswers() {
+        testSettings.selectedAnswerOverrides = {};
+        const checkboxes = document.getElementById('answerSelectionContent').querySelectorAll('input[type="checkbox"]');
+        
+        checkboxes.forEach(cb => {
+            if (cb.checked) {
+                const qId = parseInt(cb.dataset.questionId);
+                const vIdx = parseInt(cb.value);
+                
+                if (!testSettings.selectedAnswerOverrides[qId]) {
+                    testSettings.selectedAnswerOverrides[qId] = [];
+                }
+                testSettings.selectedAnswerOverrides[qId].push(vIdx);
+            }
+        });
+
+        document.getElementById('answerSelectionStatus').textContent = 'Дұрыс жауаптар сақталды ✓';
+        closeAnswerSelectionModal();
+    }
+
+    function startQuizWithSettings() {
+        testSettings.testName = document.getElementById('testName').value || 'Ат емес тест';
+        testSettings.questionCount = document.getElementById('questionCount').value;
+        testSettings.autoAnswers = document.getElementById('autoAnswers').checked;
+
+        // Сохранить настройки для этого набора вопросов
+        const qHash = hashQuestions(allParsedQuestions);
+        saveSettingsForHash(qHash);
+
+        closeSettingsModal();
+        startQuiz();
+    }
+
+    function saveTestToStorage() {
+        // Больше не сохраняем каждый запуск теста
+        // Настройки сохраняются в saveSettingsForHash
+    }
+
+    function loadSavedTests() {
+        const saved = JSON.parse(localStorage.getItem('quizMakerSettings')) || {};
+        const container = document.getElementById('savedTestsContainer');
+        const list = document.getElementById('savedTestsList');
+
+        if (Object.keys(saved).length === 0) {
+            container.style.display = 'none';
+            return;
+        }
+
+        container.style.display = 'block';
+        list.innerHTML = '';
+
+        Object.entries(saved).forEach(([hash, settings]) => {
+            const item = document.createElement('div');
+            item.className = 'saved-test-item';
+            item.style.display = 'flex';
+            item.style.justifyContent = 'space-between';
+            item.style.alignItems = 'center';
+            
+            const content = document.createElement('div');
+            content.style.flex = '1';
+            content.style.cursor = 'pointer';
+            content.onclick = () => {
+                // Восстановить вопросы и показать диалог с количеством
+                allParsedQuestions = settings.questions || [];
+                testSettings = JSON.parse(JSON.stringify(settings));
+                
+                if (allParsedQuestions.length === 0) {
+                    alert('Вопросы не найдены!');
+                    return;
+                }
+
+                // Показать упрощенный диалог с количеством и кнопкой старт
+                showQuickStartDialog(settings);
+            };
+            
+            const name = document.createElement('div');
+            name.className = 'saved-test-name';
+            name.textContent = settings.testName || 'Ат емес тест';
+
+            const info = document.createElement('div');
+            info.className = 'saved-test-info';
+            info.textContent = `Сұрақ: ${settings.questionCount === 'all' ? 'Барлығы' : settings.questionCount}`;
+
+            const deleteBtn = document.createElement('button');
+            deleteBtn.className = 'btn-secondary';
+            deleteBtn.textContent = '✕';
+            deleteBtn.style.padding = '5px 10px';
+            deleteBtn.style.fontSize = '14px';
+            deleteBtn.style.marginLeft = '10px';
+            deleteBtn.onclick = (e) => {
+                e.stopPropagation();
+                if (confirm('Бұл тестінің параметрлерін жою керек пе?')) {
+                    deleteTestSettings(hash);
+                }
+            };
+
+            content.appendChild(name);
+            content.appendChild(info);
+            item.appendChild(content);
+            item.appendChild(deleteBtn);
+            list.appendChild(item);
+        });
+    }
+
+    function showQuickStartDialog(settings) {
+        // Создаем простой диалог с выбором количества вопросов
+        const dialog = document.createElement('div');
+        dialog.className = 'modal show';
+        dialog.id = 'quickStartModal';
+        dialog.style.zIndex = '2000';
+        dialog.innerHTML = `
+            <div class="modal-content">
+                <div class="modal-header">⚙️ Тест параметрлері</div>
+                <div class="modal-field">
+                    <label class="modal-label">Максимальное количество вопросов:</label>
+                    <select id="quickQuestionCount">
+                        <option value="all" ${settings.questionCount === 'all' ? 'selected' : ''}>Барлығы (${allParsedQuestions.length})</option>
+                        <option value="20" ${settings.questionCount === '20' ? 'selected' : ''}>Макс 20</option>
+                        <option value="50" ${settings.questionCount === '50' ? 'selected' : ''}>Макс 50</option>
+                    </select>
+                </div>
+                <div class="modal-buttons">
+                    <button class="btn-secondary" onclick="document.getElementById('quickStartModal').remove();">Бас тарту</button>
+                    <button class="btn-primary" onclick="startQuizFromQuickStart()">Басту</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(dialog);
+    }
+
+    function startQuizFromQuickStart() {
+        testSettings.questionCount = document.getElementById('quickQuestionCount').value;
+        document.getElementById('quickStartModal').remove();
+        startQuiz();
+    }
+
+    // SYSTEM TESTS: attempt to populate a simple system test linked to akпараттык жуйелер.txt
+    function loadSystemTests() {
+        const container = document.getElementById('systemTestsContainer');
+        const list = document.getElementById('systemTestsList');
+        list.innerHTML = '';
+
+        // We always show one system test entry which loads questions from the local file when clicked
+        const item = document.createElement('div');
+        item.className = 'saved-test-item';
+        item.style.cursor = 'pointer';
+        item.onclick = () => startSystemTest();
+
+        const name = document.createElement('div');
+        name.className = 'saved-test-name';
+        name.textContent = 'акпараттык жуйелер.txt (системный)';
+
+        const info = document.createElement('div');
+        info.className = 'saved-test-info';
+        info.textContent = 'Загрузка вопросов из файла';
+
+        item.appendChild(name);
+        item.appendChild(info);
+        list.appendChild(item);
+
+        container.style.display = 'block';
+    }
+
+    async function startSystemTest() {
+        // Try to fetch the file and parse questions, then show quick dialog
+        const candidates = [
+            'http://127.0.0.1:8000/акпараттык%20жуйелер.txt',
+            'http://127.0.0.1:8000/questions.txt',
+            'акпараттык жуйелер.txt',
+            'акпараттык%20жуйелер.txt'
+        ];
+
+        let text = null;
+        for (const url of candidates) {
+            try {
+                const resp = await fetch(url);
+                if (!resp.ok) throw new Error('not found');
+                text = await resp.text();
+                break;
+            } catch (e) {
+                // try next
+            }
+        }
+
+        if (!text) {
+            alert('Не удалось загрузить системный файл akпараттык жуйелер.txt. Убедитесь, что он доступен.');
+            return;
+        }
+
+        allParsedQuestions = parseQuestions(text);
+        if (allParsedQuestions.length === 0) {
+            alert('В файле не найдено вопросов.');
+            return;
+        }
+
+        // Show quick start dialog with default settings
+        const settings = { questionCount: 'all', testName: 'Системный тест' };
+        testSettings = settings;
+        showQuickStartDialog(settings);
+    }
+
+    function deleteTestSettings(hash) {
+        const saved = JSON.parse(localStorage.getItem('quizMakerSettings')) || {};
+        delete saved[hash];
+        localStorage.setItem('quizMakerSettings', JSON.stringify(saved));
+        loadSavedTests();
+        alert('Параметры удалены!');
+    }
+
+    // START QUIZ
+    function startQuiz() {
+        // Используем уже загруженные вопросы
+        if (allParsedQuestions.length === 0) {
+            alert('Сұрақтар загружены не были!');
+            return;
+        }
+
+        // Применяем переопределенные правильные ответы
+        questions = JSON.parse(JSON.stringify(allParsedQuestions));
+        Object.keys(testSettings.selectedAnswerOverrides).forEach(qIdx => {
+            const idx = parseInt(qIdx);
+            if (questions[idx]) {
+                questions[idx].variants.forEach((v, vIdx) => {
+                    v.isCorrect = testSettings.selectedAnswerOverrides[idx].includes(vIdx);
+                });
+            }
+        });
+
+        // Фильтруем вопросы по количеству (только если не повторяем)
+        if (!isRetryingWrongAnswers) {
+            if (testSettings.questionCount === '20' && questions.length > 20) {
+                questions = shuffle(questions).slice(0, 20);
+            } else if (testSettings.questionCount === '50' && questions.length > 50) {
+                questions = shuffle(questions).slice(0, 50);
+            }
+
+            // Дополнить варианты до 5 штук
+            questions = ensureMinimumVariants(questions);
+
+            // Shuffle questions and variants
+            questions = shuffle(questions);
+            questions.forEach(q => {
+                q.variants = shuffle(q.variants);
+            });
+        }
 
         // Reset state
         currentQuestionIndex = 0;
         userAnswers = new Array(questions.length).fill(null);
         questionAnswerStates = new Array(questions.length).fill(false);
         answeredQuestions = 0;
+        wrongQuestionIndices = [];
+        isRetryingWrongAnswers = false;
 
         // Show quiz screen
         document.getElementById('inputScreen').classList.add('hidden');
@@ -795,7 +1345,7 @@
 
     // Attempt auto-load when page is ready
     window.addEventListener('DOMContentLoaded', () => {
-        attemptAutoLoadFile();
+        // Автозагрузка отключена
     });
 
     // DISPLAY CURRENT QUESTION
@@ -1280,6 +1830,7 @@
         // Посчитать количество полностью правильных и полностью неправильных вопросов
         let correctQuestions = 0;
         let answeredQuestionsCount = 0;
+        wrongQuestionIndices = [];
 
         questions.forEach((q, idx) => {
             const ua = userAnswers[idx];
@@ -1289,8 +1840,10 @@
 
             answeredQuestionsCount++;
 
+            let isCorrect = false;
             if (q.type === 'question') {
                 if (ua !== null && ua !== undefined && q.variants[ua] && q.variants[ua].isCorrect) {
+                    isCorrect = true;
                     correctQuestions++;
                 }
             } else {
@@ -1301,8 +1854,14 @@
 
                 if (selectedIndices.length === correctIndices.length &&
                     selectedIndices.every(i => q.variants[i] && q.variants[i].isCorrect)) {
+                    isCorrect = true;
                     correctQuestions++;
                 }
+            }
+
+            // Если неправильно, сохранить сам вопрос
+            if (!isCorrect) {
+                wrongQuestionIndices.push(q);
             }
         });
 
@@ -1310,6 +1869,14 @@
         const resultsCounts = document.getElementById('resultsCounts');
         if (resultsCounts) {
             resultsCounts.textContent = `Правильных: ${correctQuestions} • Неправильных: ${incorrectQuestions}`;
+        }
+
+        // Показать/скрыть кнопку для повторения неправильных
+        const retryBtn = document.getElementById('retryWrongBtn');
+        if (wrongQuestionIndices.length > 0) {
+            retryBtn.style.display = 'block';
+        } else {
+            retryBtn.style.display = 'none';
         }
 
         // Display result items
@@ -1413,7 +1980,48 @@
         document.getElementById('inputScreen').classList.remove('hidden');
         document.getElementById('resultsScreen').classList.add('hidden');
         document.getElementById('questionsInput').value = '';
+        
+        loadSavedTests();
     }
+
+    // RETRY WITH WRONG ANSWERS
+    // RETRY WITH WRONG ANSWERS
+    function retryWrongAnswers() {
+        if (wrongQuestionIndices.length === 0) {
+            alert('Неправильных вопросов не найдено!');
+            return;
+        }
+
+        currentQuestionIndex = 0;
+        userAnswers = new Array(wrongQuestionIndices.length).fill(null);
+        questionAnswerStates = new Array(wrongQuestionIndices.length).fill(false);
+        answeredQuestions = 0;
+
+        // Создаем новый массив вопросов только из неправильных
+        // wrongQuestionIndices содержит сами объекты вопросов, а не индексы
+        questions = wrongQuestionIndices.map(q => JSON.parse(JSON.stringify(q)));
+        
+        // Дополнить варианты до 5
+        questions = ensureMinimumVariants(questions);
+        
+        // Перемешать
+        questions = shuffle(questions);
+        questions.forEach(q => {
+            q.variants = shuffle(q.variants);
+        });
+
+        document.getElementById('resultsScreen').classList.add('hidden');
+        document.getElementById('quizScreen').classList.remove('hidden');
+        document.getElementById('totalQuestions').textContent = questions.length;
+        
+        displayQuestion();
+    }
+
+    // Initialize on page load
+    window.addEventListener('DOMContentLoaded', () => {
+        loadSavedTests();
+        loadSystemTests();
+    });
 </script>
 
 </body>
