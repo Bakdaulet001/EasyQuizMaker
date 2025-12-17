@@ -1292,19 +1292,24 @@
 
     // START QUIZ
     function startQuiz() {
-        // Используем уже загруженные вопросы
-        if (allParsedQuestions.length === 0) {
+        // Ensure testSettings defaults so missing fields (system tests) won't break
+        testSettings = testSettings || {};
+        testSettings.selectedAnswerOverrides = testSettings.selectedAnswerOverrides || {};
+        testSettings.questionCount = testSettings.questionCount || 'all';
+
+        // Use already loaded questions
+        if (!allParsedQuestions || allParsedQuestions.length === 0) {
             alert('Сұрақтар загружены не были!');
             return;
         }
 
-        // Применяем переопределенные правильные ответы
+        // Apply any overridden correct answers (if provided)
         questions = JSON.parse(JSON.stringify(allParsedQuestions));
         Object.keys(testSettings.selectedAnswerOverrides).forEach(qIdx => {
             const idx = parseInt(qIdx);
             if (questions[idx]) {
                 questions[idx].variants.forEach((v, vIdx) => {
-                    v.isCorrect = testSettings.selectedAnswerOverrides[idx].includes(vIdx);
+                    v.isCorrect = (testSettings.selectedAnswerOverrides[idx] || []).includes(vIdx);
                 });
             }
         });
