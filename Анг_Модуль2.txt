@@ -23,10 +23,10 @@
 <variant>when
 <variant>unless
 <question>Chose the right form of future time clauses: My mother will go to bed ___ I come home.
+<variant>when
 <variant>after
 <variant>as soon as
 <variant>before
-<variant>when
 <variant>unless
 <question>Complete the sentences with the correct form of the verb:  If we ____(arrive) earlier, we would have got better seats.
 <variant>had arrived
@@ -263,11 +263,11 @@
 <variant>increase
 <variant>protect
 <question>Choose the right question word: In Scotland, boys have to wear a kilt to school.
+<variant>what
 <variant>why
 <variant>who
 <variant>where
 <variant>when
-<variant>what
 <question>Choose the right question word: In Iceland, you mustn’t take the dog into the city centre.
 <variant>where
 <variant>who
@@ -281,10 +281,10 @@
 <variant>what
 <variant>who
 <question>Choose the right question word: In France, you are not allowed to call a pig ‘Napoleon’
+<variant>where
 <variant>what
 <variant>when
 <variant>who
-<variant>where
 <variant>whose
 <question>Choose the right question word: In Russia, men should take of their gloves when they shake somebody’s hand.
 <variant>when
@@ -491,14 +491,14 @@
 <variant>be able to
 <variant>couldn’t
 <question>Complete the sentences with the correct form of modal verb: I’m free tonight, so I’ll ________ come and help you if you like.
+<variant>be able to
 <variant>could
 <variant>couldn’t
 <variant>can
 <variant>cannot
-<variant>be able to
 <question>Complete the sentences with the correct form of modal verb: What does this label say? I ________ see without my glasses.
-<variant>couldn’t
 <variant>cannot
+<variant>couldn’t
 <variant>be able to
 <variant>can
 <variant>could
@@ -515,9 +515,9 @@
 <variant>have to 
 <variant>should
 <question>Complete the sentences with the correct form of modal verb: They _____be out. Nobody is answering the phone.
+<variant>must
 <variant>might
 <variant>mustn’t
-<variant>must
 <variant>should
 <variant>can
 <question>Complete the sentences with the correct form of modal verb: ‘Look, Rose left her bag here.’ ‘It ________ be Rose’s– her bag is black.’
@@ -539,8 +539,8 @@
 <variant>can
 <variant>could
 <question> Complete the phrases with the correct word: I sent you a ________ earlier – did you get it? 
-<variant>text
 <variant>message
+<variant>text
 <variant>back
 <variant>number
 <variant>engaged
@@ -587,11 +587,11 @@
 <variant>bored
 <variant>tiring
 <question> Choose the right adjective to complete the sentence: Studying for five hours a day is really ________
+<variant>tiring
 <variant>tired
 <variant>frightened 
 <variant>embarrassed
 <variant>bored
-<variant>tiring
 <question> Choose the right adjective to complete the sentence: I fell over in the restaurant. I was so ________! 
 <variant>embarrassed
 <variant>frightening
